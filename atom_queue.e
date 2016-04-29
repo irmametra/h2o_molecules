@@ -9,36 +9,72 @@ class
 
 	--will be accessed by both hydrogen and oxygen
 
-feature
+create
+	make
 
-	check_atoms (size: INTEGER): BOOLEAN
-		require
-			number_atoms >= size
+feature -- Initialization
+
+	make
+			-- Creation procedure.
 		do
-			Result := number_atoms >= size
+			queue_size := 0
+			counter := 0
 		end
 
-	consume_atom
-		require
-			number_atoms > 0
+feature {HYDROGEN, OXYGEN}
+
+	check_counter (size: INTEGER): BOOLEAN
 		do
-			number_atoms := number_atoms - 1
+			Result := counter >= size
+		end
+
+	check_queue (size: INTEGER): BOOLEAN
+		do
+			Result := queue_size >= size
+		end
+
+		---define what has to access what
+
+	add_atom
+		do
+			queue_size := queue_size + 1
 		ensure
-			number_atoms = old number_atoms - 1
+			queue_size = old queue_size + 1
 		end
 
---TO BE CHECKED
-feature {HYDROGEN_PRODUCER,OXYGEN_PRODUCER}
-		add_atom
+	consume_atoms (number_atom: INTEGER)
+			--It will remove from the queue the number of atoms given.
+
 		do
-			number_atoms := number_atoms + 1
+			queue_size := queue_size - number_atom
 		ensure
-			number_atoms = old number_atoms + 1
+			queue_size = old queue_size - number_atom and queue_size >= 0
 		end
 
+	increase_counter (delta: INTEGER)
+		do
+			counter := counter + delta
+		ensure
+			counter = old counter + delta
+		end
+
+	decrease_counter (delta: INTEGER)
+		do
+			counter := counter + delta
+		ensure
+			counter = old counter + delta
+		end
 
 feature {NONE} -- Implementation
 
-	number_atoms: INTEGER
+		--hydroQueue.signal(2)
+
+	queue_size: INTEGER
+			--COUNTER is used as a semaphore for us
+
+	counter: INTEGER
+
+invariant
+	queue_size >= 0
 
 end

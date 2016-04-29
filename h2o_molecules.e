@@ -22,6 +22,9 @@ feature -- Initialization
 		end
 		-- Creation procedure.
 
+
+
+---when we create the barrier create it as barrier(3)
 feature {NONE} -- Initialization
 
 	number_of_hydrogens: INTEGER = 20

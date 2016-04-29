@@ -1,5 +1,0 @@
-Compiler version: 15.12.9.8497 GPL Edition - unix
-Type: Quick_melt
-batch mode: False
-new session: True
-starting date: 04/22/2016 4:06:15.221 PM
