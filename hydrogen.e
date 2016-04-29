@@ -37,7 +37,7 @@ feature {NONE}
 			end
 			wait_hydrogen
 			barrier.bond
-			wait_barrier
+			wait_in_the_barrier
 		end
 
 feature {NONE}
@@ -50,9 +50,9 @@ feature {NONE}
 			io.put_string ("Hydrogen released %N")
 		end
 
-	wait_barrier
+	wait_in_the_barrier
 		require
-			barrier.wait (3)
+			barrier.wait
 		do
 			io.put_string ("Hydrogen passed barrier %N")
 		end

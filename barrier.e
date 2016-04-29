@@ -16,9 +16,9 @@ feature
 
 	make (a_max: INTEGER)
 		require
-		a_max > 0
+			a_max > 0
 		do
-			a_max := max
+			max := a_max
 			counter := 0
 		end
 
@@ -27,23 +27,31 @@ feature {HYDROGEN, OXYGEN}
 	bond
 		do
 			counter := counter + 1
+			if counter = 3 then
+				counter := 0
+				io.put_string ("Molecule ready %N")
+			end
+
 		ensure
+			if old counter = 2 then
+			counter = 0
+			else
 			counter = old counter + 1
+			end
 		end
 
-	wait (atoms_total: INTEGER): BOOLEAN
+	wait: BOOLEAN
 		do
-			Result := counter = atoms_total
+			Result := counter = max
 		end
-
 
 feature {NONE}
 
 	max: INTEGER
+
 	counter: INTEGER
 
 invariant
 	counter_positive: counter >= 0
-
 
 end

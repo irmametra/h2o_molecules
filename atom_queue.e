@@ -21,7 +21,7 @@ feature -- Initialization
 			counter := 0
 		end
 
-feature {HYDROGEN, HYDROGEN_PRODUCER}
+feature {HYDROGEN, OXYGEN}
 
 	check_counter (size: INTEGER): BOOLEAN
 		do
