@@ -22,37 +22,54 @@ feature -- Initialization
 			hydrogen_queue := a_hydrogen_queue
 			oxygen_queue := an_oxygen_queue
 			barrier := a_barrier
+			--main(hydrogen_queue, oxygen_queue, barrier)
 		end
 
-feature {NONE}
+feature
 
 	main
 		do
-			oxygen_queue.add_atom
-			if hydrogen_queue.check_queue (2) then
-				hydrogen_queue.consume_atoms (2)
-				oxygen_queue.consume_atoms (1)
-				hydrogen_queue.increase_counter (2)
-				oxygen_queue.increase_counter (1)
-			end
-			wait_oxygen
-			barrier.bond
-			wait_in_the_barrier
+			increment_atom(oxygen_queue)
+			release(hydrogen_queue, oxygen_queue)
+			wait_oxygen(oxygen_queue)
+			barrier_bond(barrier)
+			wait_in_the_barrier(barrier)
 		end
 
 feature {NONE}
 
-	wait_oxygen
-		require
-			oxygen_queue.check_counter (1)
+	release(my_hydrogen_queue: separate ATOM_QUEUE; my_oxygen_queue: separate ATOM_QUEUE)
 		do
-			oxygen_queue.decrease_counter (1)
+			if (my_hydrogen_queue.check_queue (2)) then
+				io.put_string ("GOOD TO GO %N")
+				my_hydrogen_queue.consume_atoms (2)
+				my_oxygen_queue.consume_atoms (1)
+				my_hydrogen_queue.increase_counter (2)
+				my_oxygen_queue.increase_counter (1)
+			end
+		end
+
+	increment_atom(my_oxygen_queue: separate ATOM_QUEUE)
+		do
+			my_oxygen_queue.add_atom
+		end
+
+	wait_oxygen(my_oxygen_queue: separate ATOM_QUEUE)
+		require
+			my_oxygen_queue.check_counter (1)
+		do
+			my_oxygen_queue.decrease_counter (1)
 			io.put_string ("Oxygen released %N")
 		end
 
-	wait_in_the_barrier
+	barrier_bond(my_barrier: separate BARRIER)
+		do
+			my_barrier.bond
+		end
+
+	wait_in_the_barrier(my_barrier: separate BARRIER)
 		require
-			barrier.wait
+			my_barrier.wait
 		do
 			io.put_string ("Oxygen passed barrier %N")
 		end

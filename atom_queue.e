@@ -21,26 +21,35 @@ feature -- Initialization
 			counter := 0
 		end
 
-feature {HYDROGEN, OXYGEN}
+feature{HYDROGEN, OXYGEN}
+	add_atom
+		do
+			io.put_string ("Adding atom %N")
+			queue_size := queue_size + 1
+		ensure
+			queue_size = old queue_size + 1
+		end
+
+	current_size: INTEGER
+		do
+			Result := counter
+		end
 
 	check_counter (size: INTEGER): BOOLEAN
 		do
+			io.put_real (counter)
+			io.put_string ("c%N")
 			Result := counter >= size
 		end
 
 	check_queue (size: INTEGER): BOOLEAN
 		do
+			io.put_real (counter)
+			io.put_string ("q%N")
 			Result := queue_size >= size
 		end
 
 		---define what has to access what
-
-	add_atom
-		do
-			queue_size := queue_size + 1
-		ensure
-			queue_size = old queue_size + 1
-		end
 
 	consume_atoms (number_atom: INTEGER)
 			--It will remove from the queue the number of atoms given.
@@ -61,6 +70,8 @@ feature {HYDROGEN, OXYGEN}
 	decrease_counter (delta: INTEGER)
 		do
 			counter := counter + delta
+			io.put_real (counter)
+			io.put_string ("c%N")
 		ensure
 			counter = old counter + delta
 		end

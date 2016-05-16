@@ -9,6 +9,7 @@ class
 
 inherit
 	PROCESS
+	EXECUTION_ENVIRONMENT
 
 create
 	make
@@ -36,16 +37,24 @@ feature {NONE} -- Access
 	step
 			-- Perform a producing hydrogen atoms tasks.
 		local
-			oxygen: OXYGEN
+			oxygen: separate OXYGEN
 		do
+			io.put_string ("Producing an oxygen atom %N")
 			create oxygen.make (hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
+			produce_oxygen(oxygen, oxygen_queue)
 			counter := counter + 1
+			sleep(1_000_000_000)
 		end
 
 	over: BOOLEAN
 			-- Is execution over?
 		do
 			Result := counter = max - 1
+		end
+
+	produce_oxygen(an_oxygen: separate OXYGEN; my_oxygen_queue: separate ATOM_QUEUE)
+		do
+			an_oxygen.main
 		end
 
 feature {NONE}
@@ -60,7 +69,7 @@ invariant
 	counter < max
 	hydrogen_queue /= void
 	oxygen_queue  /= void
-	counter > 0
+	counter >= 0
 	max > 0
 	barrier /= void
 
