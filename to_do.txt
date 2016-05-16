@@ -1,0 +1,5 @@
+1-it is always performing the check of the molecule creation from hydrogen, whatever the sleep configuration is
+2- Should be checked requirement "You must guarantee
+that all the threads from one molecule invoke bond before any of the threads
+from the next molecule do"
+
