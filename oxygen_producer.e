@@ -39,11 +39,13 @@ feature {NONE} -- Access
 		local
 			oxygen: separate OXYGEN
 		do
-			io.put_string ("Producing an oxygen atom %N")
-			create oxygen.make (hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
-			produce_oxygen(oxygen, oxygen_queue)
+
 			counter := counter + 1
-			sleep(1_000_000_000)
+			io.put_string ("Producing atom OXYGEN ID (" + counter.out + ")  %N")
+			create oxygen.make (counter,hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
+			produce_oxygen(oxygen, oxygen_queue)
+
+			sleep(2_000_000_000)
 		end
 
 	over: BOOLEAN

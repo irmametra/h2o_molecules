@@ -37,15 +37,13 @@ feature{HYDROGEN, OXYGEN}
 
 	check_counter (size: INTEGER): BOOLEAN
 		do
-			io.put_real (counter)
-			io.put_string ("c%N")
+			io.put_string ("counter size:" + counter.out +"%N")
 			Result := counter >= size
 		end
 
 	check_queue (size: INTEGER): BOOLEAN
 		do
-			io.put_real (counter)
-			io.put_string ("q%N")
+			io.put_string ("queue size:" + queue_size.out +"%N")
 			Result := queue_size >= size
 		end
 
@@ -63,17 +61,17 @@ feature{HYDROGEN, OXYGEN}
 	increase_counter (delta: INTEGER)
 		do
 			counter := counter + delta
+			io.put_string ("counter increased by: " + delta.out + "%N")
 		ensure
 			counter = old counter + delta
 		end
 
 	decrease_counter (delta: INTEGER)
 		do
-			counter := counter + delta
-			io.put_real (counter)
-			io.put_string ("c%N")
+			counter := counter - delta
+			io.put_string ("counter decreased by: " + delta.out + "%N")
 		ensure
-			counter = old counter + delta
+			counter = old counter - delta
 		end
 
 feature {NONE} -- Implementation

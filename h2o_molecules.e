@@ -21,6 +21,7 @@ feature -- Initialization
 			oxygen_producer: separate OXYGEN_PRODUCER
 			--collector: separate COLLECTOR
 		do
+			io.put_string ("Starting H2O production %N")
 			create hydrogen_queue.make
 			create oxygen_queue.make
 			create barrier.make (3)
@@ -30,7 +31,7 @@ feature -- Initialization
 			launch_process(hydrogen_producer)
 			launch_process(oxygen_producer)
 			--launch_process(collector)
-			io.put_string ("Starting H2O production %N")
+
 		end
 
 	launch_process(a_producer: separate PROCESS)

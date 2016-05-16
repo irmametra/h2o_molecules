@@ -33,10 +33,7 @@ feature -- Initialization
 			barrier := a_barrier
 		end
 
-	launch_process(a_producer: separate PROCESS)
-		do
-			a_producer.live
-		end
+
 
 feature {NONE} -- Access
 
@@ -45,10 +42,10 @@ feature {NONE} -- Access
 		local
 			hydrogen: separate HYDROGEN
 		do
-			io.put_string ("Producing a hydrogen atom %N")
-			create hydrogen.make (hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
+counter := counter + 1
+			io.put_string ("Producing atom HYDROGEN ID (" + counter.out + ") %N")
+			create hydrogen.make (counter,hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
 			produce_hydrogen(hydrogen, hydrogen_queue)
-			counter := counter + 1
 			sleep(1_000_000_000)
 		end
 
