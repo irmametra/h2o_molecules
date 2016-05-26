@@ -42,8 +42,9 @@ feature {NONE}
 
 	release (my_hydrogen_queue: separate ATOM_QUEUE; my_oxygen_queue: separate ATOM_QUEUE)
 		do
-			if (my_hydrogen_queue.check_queue (2) and my_hydrogen_queue.check_queue (1)) then
+			if (my_hydrogen_queue.check_queue (2) and my_oxygen_queue.check_queue (1)) then
 				io.put_string ("GOOD TO GO (Hydrogen) %N")
+
 				my_hydrogen_queue.consume_atoms (2)
 				my_oxygen_queue.consume_atoms (1)
 				my_hydrogen_queue.increase_counter (2)

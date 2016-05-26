@@ -30,6 +30,7 @@ feature -- Initialization
 			hydrogen_queue := a_hydrogen_queue
 			oxygen_queue := an_oxygen_queue
 			barrier := a_barrier
+			create random_number_generator.make
 		end
 
 feature {NONE} -- Access
@@ -44,8 +45,11 @@ feature {NONE} -- Access
 			io.put_string ("Producing atom OXYGEN ID (" + counter.out + ")  %N")
 			create oxygen.make (counter,hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
 			produce_oxygen(oxygen, oxygen_queue)
+			io.put_real ((1_000_000_000 * random_number_generator.real_i_th(counter)).floor)
+			sleep((
 
-			sleep(2_000_000_000)
+
+			1_000_000_000 * random_number_generator.real_i_th(counter)).floor)
 		end
 
 	over: BOOLEAN
@@ -66,6 +70,7 @@ feature {NONE}
 	hydrogen_queue: separate ATOM_QUEUE
 	oxygen_queue: separate ATOM_QUEUE
 	barrier: separate BARRIER
+	random_number_generator: RANDOM
 
 invariant
 	counter < max

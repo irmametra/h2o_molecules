@@ -10,6 +10,7 @@ class
 inherit
 
 	PROCESS
+
 	EXECUTION_ENVIRONMENT
 
 create
@@ -19,7 +20,7 @@ feature -- Initialization
 
 	make (a_hydrogen_queue: separate ATOM_QUEUE; an_oxygen_queue: separate ATOM_QUEUE; a_barrier: separate BARRIER; a_max: INTEGER)
 			--Creation Procedure
-			--a_max is the maximum number of atoms of hydrogen to be produced					
+			--a_max is the maximum number of atoms of hydrogen to be produced
 		require
 			a_max >= 0
 			a_hydrogen_queue /= void
@@ -33,8 +34,6 @@ feature -- Initialization
 			barrier := a_barrier
 		end
 
-
-
 feature {NONE} -- Access
 
 	step
@@ -42,11 +41,11 @@ feature {NONE} -- Access
 		local
 			hydrogen: separate HYDROGEN
 		do
-counter := counter + 1
+			counter := counter + 1
 			io.put_string ("Producing atom HYDROGEN ID (" + counter.out + ") %N")
-			create hydrogen.make (counter,hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
-			produce_hydrogen(hydrogen, hydrogen_queue)
-			sleep(1_000_000_000)
+			create hydrogen.make (counter, hydrogen_queue, oxygen_queue, barrier) --create the hydrogen the queue
+			produce_hydrogen (hydrogen, hydrogen_queue)
+			sleep (100_000_000)
 		end
 
 	over: BOOLEAN
@@ -55,7 +54,7 @@ counter := counter + 1
 			Result := counter = max - 1
 		end
 
-	produce_hydrogen(a_hydrogen: separate HYDROGEN; my_hydrogen_queue: separate ATOM_QUEUE)
+	produce_hydrogen (a_hydrogen: separate HYDROGEN; my_hydrogen_queue: separate ATOM_QUEUE)
 		do
 			a_hydrogen.main
 		end
@@ -63,15 +62,19 @@ counter := counter + 1
 feature {NONE}
 
 	max: INTEGER
+
 	counter: INTEGER
+
 	hydrogen_queue: separate ATOM_QUEUE
+
 	oxygen_queue: separate ATOM_QUEUE
+
 	barrier: separate BARRIER
 
 invariant
 	counter < max
 	hydrogen_queue /= void
-	oxygen_queue  /= void
+	oxygen_queue /= void
 	counter >= 0
 	max > 0
 	barrier /= void

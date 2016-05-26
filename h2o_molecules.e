@@ -25,11 +25,14 @@ feature -- Initialization
 			create hydrogen_queue.make
 			create oxygen_queue.make
 			create barrier.make (3)
+
 			create hydrogen_producer.make(hydrogen_queue, oxygen_queue, barrier, number_of_hydrogens)
 			create oxygen_producer.make(hydrogen_queue, oxygen_queue, barrier, number_of_oxygens)
 			--create collector.make(hydrogen_queue, oxygen_queue, barrier)
 			launch_process(hydrogen_producer)
 			launch_process(oxygen_producer)
+
+
 			--launch_process(collector)
 
 		end

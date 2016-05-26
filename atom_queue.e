@@ -37,7 +37,7 @@ feature{HYDROGEN, OXYGEN}
 
 	check_counter (size: INTEGER): BOOLEAN
 		do
-			io.put_string ("counter size:" + counter.out +"%N")
+			--io.put_string ("counter size:" + counter.out +"%N")
 			Result := counter >= size
 		end
 
@@ -54,6 +54,7 @@ feature{HYDROGEN, OXYGEN}
 
 		do
 			queue_size := queue_size - number_atom
+			io.put_string ("atom removed from queue %N")
 		ensure
 			queue_size = old queue_size - number_atom and queue_size >= 0
 		end
