@@ -1,13 +1,10 @@
 note
 	description: "Summary description for {ATOM_QUEUE}."
-	author: ""
 	date: "$Date$"
 	revision: "$Revision$"
 
 class
 	ATOM_QUEUE
-
-	--will be accessed by both hydrogen and oxygen
 
 create
 	make
@@ -15,13 +12,14 @@ create
 feature -- Initialization
 
 	make
-			-- Creation procedure.
+			-- Creation procedure			
 		do
 			queue_size := 0
 			counter := 0
 		end
 
-feature{HYDROGEN, OXYGEN}
+feature{HYDROGEN, OXYGEN} -- Restricted access to atoms
+
 	add_atom
 		do
 			io.put_string ("Adding atom %N")
@@ -37,7 +35,6 @@ feature{HYDROGEN, OXYGEN}
 
 	check_counter (size: INTEGER): BOOLEAN
 		do
-			--io.put_string ("counter size:" + counter.out +"%N")
 			Result := counter >= size
 		end
 
@@ -47,11 +44,8 @@ feature{HYDROGEN, OXYGEN}
 			Result := queue_size >= size
 		end
 
-		---define what has to access what
-
 	consume_atoms (number_atom: INTEGER)
 			--It will remove from the queue the number of atoms given.
-
 		do
 			queue_size := queue_size - number_atom
 			io.put_string ("atom removed from queue %N")
@@ -62,7 +56,6 @@ feature{HYDROGEN, OXYGEN}
 	increase_counter (delta: INTEGER)
 		do
 			counter := counter + delta
-			io.put_string ("counter increased by: " + delta.out + "%N")
 		ensure
 			counter = old counter + delta
 		end
@@ -70,18 +63,13 @@ feature{HYDROGEN, OXYGEN}
 	decrease_counter (delta: INTEGER)
 		do
 			counter := counter - delta
-			io.put_string ("counter decreased by: " + delta.out + "%N")
 		ensure
 			counter = old counter - delta
 		end
 
-feature {NONE} -- Implementation
-
-		--hydroQueue.signal(2)
+feature {NONE}
 
 	queue_size: INTEGER
-			--COUNTER is used as a semaphore for us
-
 	counter: INTEGER
 
 invariant

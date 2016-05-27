@@ -1,6 +1,5 @@
 note
-	description: "Summary description for {OXYGEN_PRODUCER}."
-	author: ""
+	description: "A process that produces n < MAX oxygen atoms as separated objects"
 	date: "$Date$"
 	revision: "$Revision$"
 
@@ -18,7 +17,10 @@ feature -- Initialization
 
 	make (a_hydrogen_queue: separate ATOM_QUEUE; an_oxygen_queue: separate ATOM_QUEUE; a_barrier: separate BARRIER; a_max: INTEGER)
 			--Creation Procedure
-			--a_max is the maximum number of atoms of hydrogen to be produced
+			--`a_max' is the maximum number of atoms of hydrogen to be produced
+			--`a_hydrogen_queue' is the shared queue storing hydrogen atoms
+			--`an_oxygen_queue' is the shared queue storing oxigen atoms
+			--`a_barrier' is shared barrier where two hydrogen atoms and one oxygen atom must bond for a molecule to be ready
 		require
 			a_max >= 0
 			a_hydrogen_queue /= void
@@ -36,7 +38,7 @@ feature -- Initialization
 feature {NONE} -- Access
 
 	step
-			-- Perform a producing hydrogen atoms tasks.
+			-- Produces an oxygen atom and sleeps for 0 to 1 seconds
 		local
 			oxygen: separate OXYGEN
 		do
@@ -45,20 +47,17 @@ feature {NONE} -- Access
 			io.put_string ("Producing atom OXYGEN ID (" + counter.out + ")  %N")
 			create oxygen.make (counter,hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
 			produce_oxygen(oxygen, oxygen_queue)
-			io.put_real ((1_000_000_000 * random_number_generator.real_i_th(counter)).floor)
-			sleep((
-
-
-			1_000_000_000 * random_number_generator.real_i_th(counter)).floor)
+			sleep((1_000_000_000 * random_number_generator.real_i_th(counter)).floor)
 		end
 
 	over: BOOLEAN
-			-- Is execution over?
+			-- Has the MAX number of atoms been produced?
 		do
 			Result := counter = max - 1
 		end
 
 	produce_oxygen(an_oxygen: separate OXYGEN; my_oxygen_queue: separate ATOM_QUEUE)
+			-- Separated call triggering oxygen behavior
 		do
 			an_oxygen.main
 		end

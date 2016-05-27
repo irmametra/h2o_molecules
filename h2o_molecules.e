@@ -1,5 +1,5 @@
 note
-	description: "H2O molecules root class"
+	description: "H2O molecules prduction root class"
 	date: "$Date$"
 	revision: "$Revision$"
 
@@ -19,7 +19,6 @@ feature -- Initialization
 		local
 			hydrogen_producer: separate HYDROGEN_PRODUCER
 			oxygen_producer: separate OXYGEN_PRODUCER
-			--collector: separate COLLECTOR
 		do
 			io.put_string ("Starting H2O production %N")
 			create hydrogen_queue.make
@@ -28,13 +27,10 @@ feature -- Initialization
 
 			create hydrogen_producer.make(hydrogen_queue, oxygen_queue, barrier, number_of_hydrogens)
 			create oxygen_producer.make(hydrogen_queue, oxygen_queue, barrier, number_of_oxygens)
-			--create collector.make(hydrogen_queue, oxygen_queue, barrier)
+			io.put_string ("Launching Hydrogen producer %N")
 			launch_process(hydrogen_producer)
+			io.put_string ("Launching Oxigen producer %N")
 			launch_process(oxygen_producer)
-
-
-			--launch_process(collector)
-
 		end
 
 	launch_process(a_producer: separate PROCESS)
@@ -42,13 +38,11 @@ feature -- Initialization
 			a_producer.live
 		end
 
----when we create the barrier create it as barrier(3)
-feature {NONE} -- Initialization
+feature {NONE} -- class variables
 
-	number_of_hydrogens: INTEGER = 50
-	number_of_oxygens: INTEGER = 35
+	number_of_hydrogens: INTEGER = 20
+	number_of_oxygens: INTEGER = 10
 	hydrogen_queue: separate ATOM_QUEUE
 	oxygen_queue: separate ATOM_QUEUE
 	barrier: separate BARRIER
-
 end

@@ -7,14 +7,14 @@ note
 class
 	BARRIER
 
-	---barrier will start with three, decrement and
-
 create
 	make
 
 feature
 
 	make (a_max: INTEGER)
+		-- Creation procedure
+		--`a_max' the number of atoms before the barrier releases a molecule
 		require
 			a_max > 0
 		do
@@ -26,6 +26,7 @@ feature
 feature {HYDROGEN, OXYGEN}
 
 	bond
+		-- Increases the number of bounds in the barrier.
 		do
 			bond_counter := bond_counter + 1
 			if bond_counter = max then
@@ -36,6 +37,7 @@ feature {HYDROGEN, OXYGEN}
 		end
 
 	pass
+		-- Decreases the number of atoms that passed the barrier. If zero, resets the barrier.
 		do
 			pass_counter := pass_counter - 1
 			if pass_counter = 0 then
@@ -48,6 +50,7 @@ feature {HYDROGEN, OXYGEN}
 		end
 
 	wait: BOOLEAN
+		-- Check if the number of atom bonds reached max
 		do
 			Result := bond_counter = max
 		end
@@ -55,12 +58,13 @@ feature {HYDROGEN, OXYGEN}
 feature {NONE}
 
 	max: INTEGER
-
 	bond_counter: INTEGER
-
 	pass_counter: INTEGER
 
 invariant
-	bond_counter_positive: bond_counter >= 0
+	bond_counter >= 0
+	bond_counter <= max
+	pass_counter >= 0
+	pass_counter <= max
 
 end
