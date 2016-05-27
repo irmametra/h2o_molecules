@@ -1,0 +1,366 @@
+Starting H2O production 
+Producing atom OXYGEN ID (1)  
+Producing atom HYDROGEN ID (1) 
+Adding atom 
+9.6622e+08queue size:0
+Adding atom 
+queue size:1
+Producing atom HYDROGEN ID (2) 
+Adding atom 
+queue size:2
+queue size:1
+GOOD TO GO (Hydrogen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 2
+counter increased by: 1
+counter decreased by: 1
+Hydrogen-1 released 
+counter decreased by: 1
+Oxygen-1 released 
+Hydrogen-2 released 
+counter decreased by: 1
+Molecule ready in the barrier 
+Hydrogen-2 bonded 
+Hydrogen-1 bonded 
+Oxygen-1 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (3) 
+Adding atom 
+queue size:1
+Producing atom HYDROGEN ID (4) 
+Adding atom 
+queue size:2
+queue size:0
+Producing atom HYDROGEN ID (5) 
+Adding atom 
+queue size:3
+queue size:0
+Producing atom HYDROGEN ID (6) 
+Adding atom 
+queue size:4
+queue size:0
+Producing atom HYDROGEN ID (7) 
+Adding atom 
+queue size:5
+queue size:0
+Producing atom HYDROGEN ID (8) 
+Adding atom 
+queue size:6
+queue size:0
+Producing atom HYDROGEN ID (9) 
+Adding atom 
+queue size:7
+queue size:0
+Producing atom HYDROGEN ID (10) 
+Adding atom 
+queue size:8
+queue size:0
+Producing atom OXYGEN ID (2)  
+2.60711e+08Adding atom 
+queue size:8
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 2
+counter increased by: 1
+counter decreased by: 1
+Oxygen-2 released 
+counter decreased by: 1
+Hydrogen-10 released 
+counter decreased by: 1
+Hydrogen-3 released 
+Molecule ready in the barrier 
+Hydrogen-3 bonded 
+Oxygen-2 bonded 
+Hydrogen-10 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (11) 
+Adding atom 
+queue size:7
+queue size:0
+Producing atom HYDROGEN ID (12) 
+Adding atom 
+queue size:8
+queue size:0
+Producing atom HYDROGEN ID (13) 
+Adding atom 
+queue size:9
+queue size:0
+Producing atom OXYGEN ID (3)  
+7.66262e+08Adding atom 
+queue size:9
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 2
+counter increased by: 1
+counter decreased by: 1
+Oxygen-3 released 
+counter decreased by: 1
+Hydrogen-9 released 
+counter decreased by: 1
+Hydrogen-13 released 
+Molecule ready in the barrier 
+Hydrogen-13 bonded 
+Oxygen-3 bonded 
+Hydrogen-9 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (14) 
+Adding atom 
+queue size:8
+queue size:0
+Producing atom HYDROGEN ID (15) 
+Adding atom 
+queue size:9
+queue size:0
+Producing atom HYDROGEN ID (16) 
+Adding atom 
+queue size:10
+queue size:0
+Producing atom HYDROGEN ID (17) 
+Adding atom 
+queue size:11
+queue size:0
+Producing atom HYDROGEN ID (18) 
+Adding atom 
+queue size:12
+queue size:0
+Producing atom HYDROGEN ID (19) 
+Adding atom 
+queue size:13
+queue size:0
+Producing atom HYDROGEN ID (20) 
+Adding atom 
+queue size:14
+queue size:0
+Producing atom OXYGEN ID (4)  
+5.69337e+08Adding atom 
+queue size:14
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 1
+counter increased by: 2
+counter decreased by: 1
+Oxygen-4 released 
+counter decreased by: 1
+Hydrogen-20 released 
+counter decreased by: 1
+Hydrogen-16 released 
+Molecule ready in the barrier 
+Hydrogen-16 bonded 
+Oxygen-4 bonded 
+Hydrogen-20 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (21) 
+Adding atom 
+queue size:13
+queue size:0
+Producing atom HYDROGEN ID (22) 
+Adding atom 
+queue size:14
+queue size:0
+Producing atom HYDROGEN ID (23) 
+Adding atom 
+queue size:15
+queue size:0
+Producing atom HYDROGEN ID (24) 
+Adding atom 
+queue size:16
+queue size:0
+Producing atom HYDROGEN ID (25) 
+Adding atom 
+queue size:17
+queue size:0
+Producing atom HYDROGEN ID (26) 
+Adding atom 
+queue size:18
+queue size:0
+Producing atom OXYGEN ID (5)  
+8.44829e+08Adding atom 
+queue size:18
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 1
+counter increased by: 2
+Oxygen-5 released 
+counter decreased by: 1
+counter decreased by: 1
+Hydrogen-7 released 
+counter decreased by: 1
+Hydrogen-19 released 
+Molecule ready in the barrier 
+Hydrogen-19 bonded 
+Oxygen-5 bonded 
+Hydrogen-7 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (27) 
+Adding atom 
+queue size:17
+queue size:0
+Producing atom HYDROGEN ID (28) 
+Adding atom 
+queue size:18
+queue size:0
+Producing atom HYDROGEN ID (29) 
+Adding atom 
+queue size:19
+queue size:0
+Producing atom HYDROGEN ID (30) 
+Adding atom 
+queue size:20
+queue size:0
+Producing atom HYDROGEN ID (31) 
+Adding atom 
+queue size:21
+queue size:0
+Producing atom HYDROGEN ID (32) 
+Adding atom 
+queue size:22
+queue size:0
+Producing atom HYDROGEN ID (33) 
+Adding atom 
+queue size:23
+queue size:0
+Producing atom HYDROGEN ID (34) 
+Adding atom 
+queue size:24
+queue size:0
+Producing atom OXYGEN ID (6)  
+4.42665e+07Adding atom 
+queue size:24
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 2
+counter increased by: 1
+Oxygen-6 released 
+Hydrogen-29 released 
+counter decreased by: 1
+counter decreased by: 1
+counter decreased by: 1
+Hydrogen-32 released 
+Molecule ready in the barrier 
+Hydrogen-32 bonded 
+Oxygen-6 bonded 
+Hydrogen-29 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (35) 
+Adding atom 
+queue size:23
+queue size:0
+Producing atom OXYGEN ID (7)  
+9.87184e+08Adding atom 
+queue size:23
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 1
+counter increased by: 2
+Oxygen-7 released 
+counter decreased by: 1
+counter decreased by: 1
+Hydrogen-14 released 
+counter decreased by: 1
+Hydrogen-24 released 
+Molecule ready in the barrier 
+Hydrogen-24 bonded 
+Oxygen-7 bonded 
+Hydrogen-14 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (36) 
+Adding atom 
+queue size:22
+queue size:0
+Producing atom HYDROGEN ID (37) 
+Adding atom 
+queue size:23
+queue size:0
+Producing atom HYDROGEN ID (38) 
+Adding atom 
+queue size:24
+queue size:0
+Producing atom HYDROGEN ID (39) 
+Adding atom 
+queue size:25
+queue size:0
+Producing atom HYDROGEN ID (40) 
+Adding atom 
+queue size:26
+queue size:0
+Producing atom HYDROGEN ID (41) 
+Adding atom 
+queue size:27
+queue size:0
+Producing atom HYDROGEN ID (42) 
+Adding atom 
+queue size:28
+queue size:0
+Producing atom HYDROGEN ID (43) 
+Adding atom 
+queue size:29
+queue size:0
+Producing atom HYDROGEN ID (44) 
+Adding atom 
+queue size:30
+queue size:0
+Producing atom HYDROGEN ID (45) 
+Producing atom OXYGEN ID (8)  
+Adding atom 
+queue size:31
+6.0135e+08queue size:0
+Adding atom 
+queue size:31
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 2
+counter increased by: 1
+Oxygen-8 released 
+counter decreased by: 1
+Hydrogen-45 released 
+counter decreased by: 1
+counter decreased by: 1
+Hydrogen-35 released 
+Molecule ready in the barrier 
+Hydrogen-35 bonded 
+Oxygen-8 bonded 
+Hydrogen-45 bonded 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (46) 
+Adding atom 
+queue size:30
+queue size:0
+Producing atom HYDROGEN ID (47) 
+Adding atom 
+queue size:31
+queue size:0
+Producing atom HYDROGEN ID (48) 
+Adding atom 
+queue size:32
+queue size:0
+Producing atom HYDROGEN ID (49) 
+Adding atom 
+queue size:33
+queue size:0
+Producing atom OXYGEN ID (9)  
+8.96375e+08Adding atom 
+queue size:33
+GOOD TO GO (Oxygen) 
+atom removed from queue 
+atom removed from queue 
+counter increased by: 2
+counter increased by: 1
+counter decreased by: 1
+Oxygen-9 released 
+Hydrogen-49 released 
+counter decreased by: 1
+counter decreased by: 1
+Hydrogen-41 released 
+Molecule ready in the barrier 
+Hydrogen-41 bonded 
+Oxygen-9 bonded 
+Hydrogen-49 bonded 
+
