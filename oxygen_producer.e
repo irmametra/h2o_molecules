@@ -1,13 +1,16 @@
 note
-	description: "A process that produces n < MAX oxygen atoms as separated objects"
-	date: "$Date$"
+	description: "A class that represents a process that produces of n < MAX oxygen atoms as separated objects"
+	author: "Irma Metra & Danilo Figueira Mendonça"
+	date: "May 2016"
 	revision: "$Revision$"
 
 class
 	OXYGEN_PRODUCER
 
 inherit
+
 	PROCESS
+
 	EXECUTION_ENVIRONMENT
 
 create
@@ -42,12 +45,11 @@ feature {NONE} -- Access
 		local
 			oxygen: separate OXYGEN
 		do
-
 			counter := counter + 1
 			io.put_string ("Producing atom OXYGEN ID (" + counter.out + ")  %N")
-			create oxygen.make (counter,hydrogen_queue,oxygen_queue,barrier) --create the hydrogen the queue
-			produce_oxygen(oxygen, oxygen_queue)
-			sleep((1_000_000_000 * random_number_generator.real_i_th(counter)).floor)
+			create oxygen.make (counter, hydrogen_queue, oxygen_queue, barrier) --create the hydrogen the queue
+			produce_oxygen (oxygen, oxygen_queue)
+			sleep ((1_000_000_000 * random_number_generator.real_i_th (counter)).floor)
 		end
 
 	over: BOOLEAN
@@ -56,7 +58,7 @@ feature {NONE} -- Access
 			Result := counter = max - 1
 		end
 
-	produce_oxygen(an_oxygen: separate OXYGEN; my_oxygen_queue: separate ATOM_QUEUE)
+	produce_oxygen (an_oxygen: separate OXYGEN; my_oxygen_queue: separate ATOM_QUEUE)
 			-- Separated call triggering oxygen behavior
 		do
 			an_oxygen.main
@@ -65,16 +67,21 @@ feature {NONE} -- Access
 feature {NONE}
 
 	max: INTEGER
+
 	counter: INTEGER
+
 	hydrogen_queue: separate ATOM_QUEUE
+
 	oxygen_queue: separate ATOM_QUEUE
+
 	barrier: separate BARRIER
+
 	random_number_generator: RANDOM
 
 invariant
 	counter < max
 	hydrogen_queue /= void
-	oxygen_queue  /= void
+	oxygen_queue /= void
 	counter >= 0
 	max > 0
 	barrier /= void

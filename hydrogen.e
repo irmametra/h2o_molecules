@@ -1,7 +1,7 @@
 note
 	description: "Summary description for {HYDROGEN}."
-	author: ""
-	date: "$Date$"
+	author: "Irma Metra & Danilo Figueira Mendonça"
+	date: "May 2016"
 	revision: "$Revision$"
 
 class
@@ -13,12 +13,12 @@ create
 feature -- Initialization
 
 	make (an_id: INTEGER; a_hydrogen_queue: separate ATOM_QUEUE; an_oxygen_queue: separate ATOM_QUEUE; a_barrier: separate BARRIER)
-			--Creation Procedure		
+			--Creation Procedure
 			--`an_id' the id of the current hydrogem atom
 			--`a_max' is the maximum number of atoms of hydrogen to be produced
 			--`a_hydrogen_queue' is the shared queue storing hydrogen atoms
 			--`an_oxygen_queue' is the shared queue storing oxigen atoms
-			--`a_barrier' is shared barrier where two hydrogen atoms and one oxygen atom must bond for a molecule to be ready	
+			--`a_barrier' is shared barrier where two hydrogen atoms and one oxygen atom must bond for a molecule to be ready
 		require
 			an_id >= 0
 			a_hydrogen_queue /= void
@@ -34,7 +34,7 @@ feature -- Initialization
 feature
 
 	main
-		-- Atom behavior implementation
+			-- Atom behavior implementation
 		do
 			increment_atom (hydrogen_queue)
 			check_molecule (hydrogen_queue, oxygen_queue)
@@ -49,7 +49,7 @@ feature {NONE}
 			-- Signalize that a molecule is ready if an oxygen and two hydrogen atoms are available
 		do
 			if (my_hydrogen_queue.check_queue (2) and my_oxygen_queue.check_queue (1)) then
-				io.put_string ("Hydrogen: molecule ready to be relased %N")
+				io.put_string ("Hydrogen: molecule ready to be released %N")
 				my_hydrogen_queue.consume_atoms (2)
 				my_oxygen_queue.consume_atoms (1)
 				my_hydrogen_queue.increase_counter (2)
@@ -91,8 +91,11 @@ feature {NONE}
 feature {NONE}
 
 	hydrogen_queue: separate ATOM_QUEUE
+
 	oxygen_queue: separate ATOM_QUEUE
+
 	barrier: separate BARRIER
+
 	id: INTEGER
 
 invariant

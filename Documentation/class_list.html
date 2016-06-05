@@ -1,0 +1,1387 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 15.12.9.8497 GPL Edition - unix">
+<meta name="keywords" content="Eiffel system"/>
+<TITLE>scoop_project class dictionary</TITLE>
+<LINK REL="stylesheet" HREF="default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="nolink1">Classes</TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE=""></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">Classes</SPAN>
+	<A CLASS="eclass" HREF="base/abstract_special_chart.html">ABSTRACT_SPECIAL</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Ancestor of SPECIAL to perform queries on SPECIAL without knowing its actual generic type.</SPAN>
+
+	<A CLASS="eclass" HREF="base/action_sequence_chart.html">ACTION_SEQUENCE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">EVENT_DATA</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="base/tuple_chart.html">TUPLE</A> <SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="base/any.html#f_default_create">default_create</A> <SPAN CLASS="ekeyword">end</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> A sequence of actions to be performed on </SPAN>`call'
+
+	<A CLASS="eclass" HREF="base/active_chart.html">ACTIVE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> `</SPAN>`Active'<SPAN CLASS="ecomment">' data structures, which at every stage have</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> a possibly undefined `</SPAN>`current item'<SPAN CLASS="ecomment">'.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic access and modification operations apply to the current item.</SPAN>
+
+	<A CLASS="eclass" HREF="base/active_integer_interval_chart.html">ACTIVE_INTEGER_INTERVAL</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Contiguous integer interval that calls an action sequence</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> when it changes.</SPAN>
+
+	<A CLASS="eclass" HREF="base/active_list_chart.html">ACTIVE_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential, one-way linked lists that call an action</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> sequence when an item is removed or added.</SPAN>
+
+	<A CLASS="eclass" HREF="base/address_applied_to_melted_feature_chart.html">ADDRESS_APPLIED_TO_MELTED_FEATURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised when $ is applied to melted feature</SPAN>
+
+	<A CLASS="eclass" HREF="base/agent_tracing_handler_chart.html">AGENT_TRACING_HANDLER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Abstract class used by TRACE_MANAGER to dispatch tracing events to user using STRING data via an agent.</SPAN>
+
+	<A CLASS="eclass" HREF="base/any_chart.html">ANY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Project-wide universal properties.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class is an ancestor to all developer-written classes.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ANY may be customized for individual projects or teams.</SPAN>
+
+	<A CLASS="eclass" HREF="base/arguments_chart.html">ARGUMENTS</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access to command-line arguments. This class </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/arguments_32_chart.html">ARGUMENTS_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access to command-line arguments. This class </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/array_chart.html">ARRAY</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequences of values, all of the same type or of a conforming one,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> accessible through integer indices in a contiguous interval.</SPAN>
+
+	<A CLASS="eclass" HREF="base/array2_chart.html">ARRAY2</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Two-dimensional arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/arrayed_circular_chart.html">ARRAYED_CIRCULAR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Circular chains implemented by resizable arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/arrayed_list_chart.html">ARRAYED_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Lists implemented by resizable arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/arrayed_list_cursor_chart.html">ARRAYED_LIST_CURSOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for arrayed lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/arrayed_queue_chart.html">ARRAYED_QUEUE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unbounded queues, implemented by resizable arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/arrayed_set_chart.html">ARRAYED_SET</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sets represented as arrayed lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/arrayed_stack_chart.html">ARRAYED_STACK</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Stacks implemented by resizable arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/arrayed_tree_chart.html">ARRAYED_TREE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Trees where the children of each node are kept in an array</SPAN>
+
+	<A CLASS="eclass" HREF="base/ascii_chart.html">ASCII</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The ASCII character set.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/assertion_violation_chart.html">ASSERTION_VIOLATION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception represents an assertion violation.</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/atom_queue_chart.html">ATOM_QUEUE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><A CLASS="eclass" HREF="scoop_project/atom_queue_chart.html">ATOM_QUEUE</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/bad_inspect_value_chart.html">BAD_INSPECT_VALUE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised by inspect value which is not one</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of the inspect constants, if there is no Else_part.</SPAN>
+
+	<A CLASS="eclass" HREF="base/bag_chart.html">BAG</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Collections of items, where each item may occur zero</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> or more times, and the number of occurrences is meaningful.</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/barrier_chart.html">BARRIER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><A CLASS="eclass" HREF="scoop_project/barrier_chart.html">BARRIER</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/basic_routines_chart.html">BASIC_ROUTINES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Some useful facilities on objects of basic types</SPAN>
+
+	<A CLASS="eclass" HREF="base/bilinear_chart.html">BILINEAR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Structures that may be traversed forward and backward</SPAN>
+
+	<A CLASS="eclass" HREF="base/binary_search_tree_chart.html">BINARY_SEARCH_TREE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Binary search trees; left child item is less than current item,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> right child item is greater</SPAN>
+
+	<A CLASS="eclass" HREF="base/binary_search_tree_set_chart.html">BINARY_SEARCH_TREE_SET</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sorted sets implemented as binary search trees</SPAN>
+
+	<A CLASS="eclass" HREF="base/binary_tree_chart.html">BINARY_TREE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Binary tree: each node may have a left child and a right child</SPAN>
+
+	<A CLASS="eclass" HREF="base/bi_linkable_chart.html">BI_LINKABLE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Linkable cells with a reference to the left and right neighbors</SPAN>
+
+	<A CLASS="eclass" HREF="base/boolean_chart.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Truth values, with the boolean operations</SPAN>
+
+	<A CLASS="eclass" HREF="base/boolean_ref_chart.html">BOOLEAN_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing a boolean value</SPAN>
+
+	<A CLASS="eclass" HREF="base/bool_string_chart.html">BOOL_STRING</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Packed boolean strings</SPAN>
+
+	<A CLASS="eclass" HREF="base/bounded_chart.html">BOUNDED</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Bounded data structures, with a notion of capacity.</SPAN>
+
+	<A CLASS="eclass" HREF="base/bounded_queue_chart.html">BOUNDED_QUEUE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Queues with a bounded physical size, implemented by arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/bounded_stack_chart.html">BOUNDED_STACK</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Stacks with a bounded physical size, implemented by arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/box_chart.html">BOX</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Data structures of the most general kind,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> having the potential ability to become full,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and characterized by their implementation properties.</SPAN>
+
+	<A CLASS="eclass" HREF="base/cell_chart.html">CELL</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cells containing an item</SPAN>
+
+	<A CLASS="eclass" HREF="base/chain_chart.html">CHAIN</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Possibly circular sequences of items,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> without commitment to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/character_32_chart.html">CHARACTER_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unicode characters, with comparison operations</SPAN>
+
+	<A CLASS="eclass" HREF="base/character_32_ref_chart.html">CHARACTER_32_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing a unicode character value</SPAN>
+
+	<A CLASS="eclass" HREF="base/character_8_chart.html">CHARACTER_8</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Characters, with comparison operations and an ASCII code</SPAN>
+
+	<A CLASS="eclass" HREF="base/character_8_ref_chart.html">CHARACTER_8_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing a character value</SPAN>
+
+	<A CLASS="eclass" HREF="base/character_property_chart.html">CHARACTER_PROPERTY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Helper functions to provide property of a Unicode character of type CHARACTER_32.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This includes finding out if a character is lower, upper, title case, or if it is a digit,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> a punctuation, a control or a space character.</SPAN>
+
+	<A CLASS="eclass" HREF="base/check_violation_chart.html">CHECK_VIOLATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised by violated checks</SPAN>
+
+	<A CLASS="eclass" HREF="base/circular_chart.html">CIRCULAR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Circular chains, without commitment to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/circular_cursor_chart.html">CIRCULAR_CURSOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for circular lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/class_name_translations_chart.html">CLASS_NAME_TRANSLATIONS</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Translations of class names between a storing and a retrieving</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> system. Values in this table are names of classes in the retrieving</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> system, indexed by names of generating classes in the storing</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> system (i.e. with no generic arguments). Values may have generic</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> arguments (e.g. &quot;MY_CLASS </SPAN><SPAN CLASS="ecomment">[DOUBLE]</SPAN><SPAN CLASS="ecomment">&quot;), thus allowing a very simple</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> conversion of a non-generic class into a generic class. The</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> presence of entries in this table affects all retrieve operations</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> for objects stored using </SPAN>`independent_store'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/collection_chart.html">COLLECTION</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> General container data structures, </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> characterized by the membership properties of their items.</SPAN>
+
+	<A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that may be compared according to a total order relation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: The basic operation is </SPAN>`&lt;'<SPAN CLASS="ecomment"> (less than); others are defined</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in terms of this operation and </SPAN><A CLASS="efeature" HREF="base/any.html#f_is_equal">is_equal</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/comparable_set_chart.html">COMPARABLE_SET</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sets whose items may be compared according to a total order relation</SPAN>
+
+	<A CLASS="eclass" HREF="base/comparable_struct_chart.html">COMPARABLE_STRUCT</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Data structures whose items may be compared</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> according to a total order relation</SPAN>
+
+	<A CLASS="eclass" HREF="base/com_failure_chart.html">COM_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception for a COM error</SPAN>
+
+	<A CLASS="eclass" HREF="base/console_chart.html">CONSOLE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Commonly used console input and output mechanisms. </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/container_chart.html">CONTAINER</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Data structures of the most general kind,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> used to hold zero or more items.</SPAN>
+
+	<A CLASS="eclass" HREF="base/countable_chart.html">COUNTABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Infinite containers whose items are in one-to-one </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> correspondence with the integers.</SPAN>
+
+	<A CLASS="eclass" HREF="base/countable_sequence_chart.html">COUNTABLE_SEQUENCE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Infinite sequences, indexed by integers</SPAN>
+
+	<A CLASS="eclass" HREF="base/create_on_deferred_chart.html">CREATE_ON_DEFERRED</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised when creating deferred classes</SPAN>
+
+	<A CLASS="eclass" HREF="base/cursor_chart.html">CURSOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for remembering positions in arbitrary data structures</SPAN>
+
+	<A CLASS="eclass" HREF="base/cursor_structure_chart.html">CURSOR_STRUCTURE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Active structures, which always have a current position</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> accessible through a cursor.</SPAN>
+
+	<A CLASS="eclass" HREF="base/cursor_tree_chart.html">CURSOR_TREE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Trees as active structures that may be traversed using a cursor</SPAN>
+
+	<A CLASS="eclass" HREF="base/cursor_tree_iterator_chart.html">CURSOR_TREE_ITERATOR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that are able to iterate over cursor trees, </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> on which they can perform repeated actions and tests according</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to a number of predefined control structures such as `</SPAN>`if'<SPAN CLASS="ecomment">',</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> `</SPAN>`until'<SPAN CLASS="ecomment">' and others.</SPAN>
+
+	<A CLASS="eclass" HREF="base/c_string_chart.html">C_STRING</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> A low-level string class to solve some garbage collector problems (mainly objects moving around) when interfacing with C APIs.</SPAN>
+
+	<A CLASS="eclass" HREF="base/data_exception_chart.html">DATA_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Deffered class of data exception from the runtime</SPAN>
+
+	<A CLASS="eclass" HREF="base/debug_output_chart.html">DEBUG_OUTPUT</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that provide an output in debugger</SPAN>
+
+	<A CLASS="eclass" HREF="base/declarator_chart.html">DECLARATOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Class used to ensure proper precompilation of EiffelBase. </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Not to be used otherwise.</SPAN>
+
+	<A CLASS="eclass" HREF="base/developer_exception_chart.html">DEVELOPER_EXCEPTION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Ancestor of all developer exceptions</SPAN>
+
+	<A CLASS="eclass" HREF="base/directory_chart.html">DIRECTORY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Directories, in the Unix sense, with creation and exploration features</SPAN>
+
+	<A CLASS="eclass" HREF="base/directory_name_chart.html">DIRECTORY_NAME</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Directory name abstraction</SPAN>
+
+	<A CLASS="eclass" HREF="base/dispenser_chart.html">DISPENSER</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Dispensers: containers for which clients have no say</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> as to what item they can access at a given time.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Examples include stacks and queues.</SPAN>
+
+	<A CLASS="eclass" HREF="base/disposable_chart.html">DISPOSABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Perform cleanup operations before current instance is reclaimed by garbage collection.</SPAN>
+
+	<A CLASS="eclass" HREF="base/double_math_chart.html">DOUBLE_MATH</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic mathematical operations, double-precision.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/dynamic_chain_chart.html">DYNAMIC_CHAIN</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Dynamically modifiable chains</SPAN>
+
+	<A CLASS="eclass" HREF="base/dynamic_circular_chart.html">DYNAMIC_CIRCULAR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Dynamically modifiable circular chains</SPAN>
+
+	<A CLASS="eclass" HREF="base/dynamic_list_chart.html">DYNAMIC_LIST</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential, dynamically modifiable lists,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> without commitment to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/dynamic_tree_chart.html">DYNAMIC_TREE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Trees with a dynamically modifiable structure</SPAN>
+
+	<A CLASS="eclass" HREF="base/ecma_internal_chart.html">ECMA_INTERNAL</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Version of INTERNAL which does not use the mapping of STRING to STRING_8, INTEGER to INTEGER_32, etc...</SPAN>
+
+	<A CLASS="eclass" HREF="base/eiffelstudio_specific_language_exception_chart.html">EIFFELSTUDIO_SPECIFIC_LANGUAGE_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Deferred class representing EiffelStudio specific language exceptions.</SPAN>
+
+	<A CLASS="eclass" HREF="base/eiffel_runtime_exception_chart.html">EIFFEL_RUNTIME_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Eiffel runtime exception</SPAN>
+
+	<A CLASS="eclass" HREF="base/eiffel_runtime_panic_chart.html">EIFFEL_RUNTIME_PANIC</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Eiffel runtime panic</SPAN>
+
+	<A CLASS="eclass" HREF="base/eif_exception_chart.html">EIF_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Deferred class for exceptions of Eiffel language, runtime and so on.</SPAN>
+
+	<A CLASS="eclass" HREF="base/exception_chart.html">EXCEPTION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Ancestor of all exception classes.</SPAN>
+
+	<A CLASS="eclass" HREF="base/exceptions_chart.html">EXCEPTIONS</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Facilities for adapting the exception handling mechanism.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/exception_in_signal_handler_failure_chart.html">EXCEPTION_IN_SIGNAL_HANDLER_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised in signal handler</SPAN>
+
+	<A CLASS="eclass" HREF="base/exception_manager_chart.html">EXCEPTION_MANAGER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Common exception operations and management.</SPAN>
+
+	<A CLASS="eclass" HREF="base/exception_manager_factory_chart.html">EXCEPTION_MANAGER_FACTORY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception manager factory.</SPAN>
+
+	<A CLASS="eclass" HREF="base/excep_const_chart.html">EXCEP_CONST</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Constants used for exception handling.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/execution_environment_chart.html">EXECUTION_ENVIRONMENT</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The objects available from the environment at time of execution</SPAN>
+
+	<A CLASS="eclass" HREF="base/external_failure_chart.html">EXTERNAL_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception for operating system error</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> which does not set the </SPAN>`errno'<SPAN CLASS="ecomment"> variable (Unix-specific)</SPAN>
+
+	<A CLASS="eclass" HREF="base/fibonacci_chart.html">FIBONACCI</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The Fibonacci number sequence</SPAN>
+
+	<A CLASS="eclass" HREF="base/file_chart.html">FILE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential files, viewed as persistent sequences of characters</SPAN>
+
+	<A CLASS="eclass" HREF="base/file_comparer_chart.html">FILE_COMPARER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Find out if two paths corresponds to exactly the same file.</SPAN>
+
+	<A CLASS="eclass" HREF="base/file_info_chart.html">FILE_INFO</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Internal file information</SPAN>
+
+	<A CLASS="eclass" HREF="base/file_name_chart.html">FILE_NAME</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> File name abstraction</SPAN>
+
+	<A CLASS="eclass" HREF="base/file_utilities_chart.html">FILE_UTILITIES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> File utilities, for retrieving files and folders and formatting paths.</SPAN>
+
+	<A CLASS="eclass" HREF="base/finite_chart.html">FINITE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Structures with a finite item count</SPAN>
+
+	<A CLASS="eclass" HREF="base/fixed_chart.html">FIXED</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Finite structures whose item count cannot be changed</SPAN>
+
+	<A CLASS="eclass" HREF="base/fixed_list_chart.html">FIXED_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Lists with fixed maximum numbers of items, implemented by arrays</SPAN>
+
+	<A CLASS="eclass" HREF="base/fixed_tree_chart.html">FIXED_TREE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Trees where each node has a fixed number of children</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (The number of children is arbitrary but cannot be</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> changed once the node has been created</SPAN>
+
+	<A CLASS="eclass" HREF="base/floating_point_failure_chart.html">FLOATING_POINT_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Floating point failure</SPAN>
+
+	<A CLASS="eclass" HREF="base/format_double_chart.html">FORMAT_DOUBLE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Formatter for non-integral numbers</SPAN>
+
+	<A CLASS="eclass" HREF="base/format_integer_chart.html">FORMAT_INTEGER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Formatter for integral numbers</SPAN>
+
+	<A CLASS="eclass" HREF="base/function_chart.html">FUNCTION</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">OPEN_ARGS</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="base/tuple_chart.html">TUPLE</A> <SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="base/any.html#f_default_create">default_create</A> <SPAN CLASS="ekeyword">end</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="egeneric">RESULT_TYPE</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects representing delayed calls to a function,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> with some arguments possibly still open.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: Features are the same as those of ROUTINE,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> with </SPAN>`apply'<SPAN CLASS="ecomment"> made effective, and the addition</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of </SPAN>`last_result'<SPAN CLASS="ecomment"> and </SPAN>`item'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/gc_info_chart.html">GC_INFO</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Garbage collector statistics.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Time accounting is relevant only if </SPAN>`enable_time_accounting'<SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (from MEMORY) has been called.</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/h2o_molecules_chart.html">H2O_MOLECULES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> H2O molecules root class</SPAN>
+
+	<A CLASS="eclass" HREF="base/hardware_exception_chart.html">HARDWARE_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Deferred class for hardware exceptions</SPAN>
+
+	<A CLASS="eclass" HREF="base/hashable_chart.html">HASHABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Values that may be hashed into an integer index, </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> for use as keys in hash tables</SPAN>
+
+	<A CLASS="eclass" HREF="base/hash_table_chart.html">HASH_TABLE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="egeneric">K</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="base/hashable_chart.html">HASHABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Hash tables, used to store items identified by hashable keys</SPAN>
+
+	<A CLASS="eclass" HREF="base/hash_table_cursor_chart.html">HASH_TABLE_CURSOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for hash table traversal</SPAN>
+
+	<A CLASS="eclass" HREF="base/hash_table_iteration_cursor_chart.html">HASH_TABLE_ITERATION_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="egeneric">K</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="base/hashable_chart.html">HASHABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Concrete of an external iteration cursor for </SPAN><A CLASS="eclass" HREF="base/hash_table_chart.html">HASH_TABLE</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/heap_priority_queue_chart.html">HEAP_PRIORITY_QUEUE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Priority queues implemented as heaps</SPAN>
+
+	<A CLASS="eclass" HREF="base/hexadecimal_string_to_integer_converter_chart.html">HEXADECIMAL_STRING_TO_INTEGER_CONVERTER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Convertor to do hexadecimal string to integer/natural conversion</SPAN>
+
+	<A CLASS="eclass" HREF="base/hierarchical_chart.html">HIERARCHICAL</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Hierarchical structures in which each item has zero or</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> one immediate predecessor, and zero or more successors.</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/hydrogen_chart.html">HYDROGEN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><A CLASS="eclass" HREF="scoop_project/hydrogen_chart.html">HYDROGEN</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/hydrogen_producer_chart.html">HYDROGEN_PRODUCER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="scoop_project/hydrogen_producer_chart.html">HYDROGEN_PRODUCER</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="ecomment">.This</SPAN><SPAN CLASS="ecomment"> class produces the atoms of hydrogen</SPAN>
+
+	<A CLASS="eclass" HREF="base/identified_chart.html">IDENTIFIED</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects identified, uniquely during any session, by an integer</SPAN>
+
+	<A CLASS="eclass" HREF="base/identified_controller_chart.html">IDENTIFIED_CONTROLLER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Externals for managing the object id stack (see identified.e)</SPAN>
+
+	<A CLASS="eclass" HREF="base/identified_routines_chart.html">IDENTIFIED_ROUTINES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects identified, uniquely during any session, by an integer</SPAN>
+
+	<A CLASS="eclass" HREF="base/immutable_string_32_chart.html">IMMUTABLE_STRING_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequences of immutable 32-bit characters, accessible through integer indices</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in a contiguous range.</SPAN>
+
+	<A CLASS="eclass" HREF="base/immutable_string_8_chart.html">IMMUTABLE_STRING_8</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequences of immutable 8-bit characters, accessible through integer indices</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in a contiguous range.</SPAN>
+
+	<A CLASS="eclass" HREF="base/immutable_string_general_chart.html">IMMUTABLE_STRING_GENERAL</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Common ancestors to all immutable STRING classes.</SPAN>
+
+	<A CLASS="eclass" HREF="base/indexable_chart.html">INDEXABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="egeneric">H</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/integer_32_chart.html">INTEGER_32</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Tables whose keys are integers in a contiguous interval</SPAN>
+
+	<A CLASS="eclass" HREF="base/indexable_iteration_cursor_chart.html">INDEXABLE_ITERATION_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Concrete version of an external iteration cursor for </SPAN><A CLASS="eclass" HREF="base/indexable_chart.html">INDEXABLE</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/infinite_chart.html">INFINITE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Infinite containers.</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_16_chart.html">INTEGER_16</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Integer values coded on 16 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_16_ref_chart.html">INTEGER_16_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an integer value coded on 16 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_32_chart.html">INTEGER_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Integer values</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_32_ref_chart.html">INTEGER_32_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an integer value coded on 32 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_64_chart.html">INTEGER_64</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Integer values coded on 64 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_64_ref_chart.html">INTEGER_64_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an integer value coded on 64 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_8_chart.html">INTEGER_8</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Integer values coded on 8 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_8_ref_chart.html">INTEGER_8_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an integer value coded on 8 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_interval_chart.html">INTEGER_INTERVAL</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Contiguous integer intervals</SPAN>
+
+	<A CLASS="eclass" HREF="base/integer_overflow_checker_chart.html">INTEGER_OVERFLOW_CHECKER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> String - Integer/Natural conversion overflow checker</SPAN>
+
+	<A CLASS="eclass" HREF="base/interactive_list_chart.html">INTERACTIVE_LIST</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential, one-way linked lists that call add/remove features</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> when an item is removed or added.</SPAN>
+
+	<A CLASS="eclass" HREF="base/internal_chart.html">INTERNAL</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access to internal object properties.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/internal_helper_chart.html">INTERNAL_HELPER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Helper for routines in REFLECTOR class.</SPAN>
+
+	<A CLASS="eclass" HREF="base/invariant_violation_chart.html">INVARIANT_VIOLATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception representing an invariant violation</SPAN>
+
+	<A CLASS="eclass" HREF="base/io_failure_chart.html">IO_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> IO failure</SPAN>
+
+	<A CLASS="eclass" HREF="base/io_medium_chart.html">IO_MEDIUM</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Any medium that can perform input and/or output</SPAN>
+
+	<A CLASS="eclass" HREF="base/ise_exception_manager_chart.html">ISE_EXCEPTION_MANAGER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception manager. </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The manager handles all common operations of exception mechanism and interaction with the ISE runtime.</SPAN>
+
+	<A CLASS="eclass" HREF="base/ise_runtime_chart.html">ISE_RUNTIME</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Set of features to access ISE runtime functionality.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> To be used at your own risk.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Interface may changed without notice.</SPAN>
+
+	<A CLASS="eclass" HREF="base/ise_scoop_runtime_chart.html">ISE_SCOOP_RUNTIME</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Features to access and interact with the SCOOP runtime.</SPAN>
+
+	<A CLASS="eclass" HREF="base/iterable_chart.html">ITERABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Structure that can be iterated over using </SPAN>`across...loop...end'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/iteration_cursor_chart.html">ITERATION_CURSOR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> External iteration cursor used by </SPAN>`across...loop...end'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/iterator_chart.html">ITERATOR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that are able to iterate over traversable structures,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> on which they can perform repeated actions and tests according</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to a number of predefined control structures such as `</SPAN>`if'<SPAN CLASS="ecomment">',</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> `</SPAN>`until'<SPAN CLASS="ecomment">' and others.</SPAN>
+
+	<A CLASS="eclass" HREF="base/language_exception_chart.html">LANGUAGE_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Eiffel language exception</SPAN>
+
+	<A CLASS="eclass" HREF="base/linear_chart.html">LINEAR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Structures whose items may be accessed sequentially, one-way</SPAN>
+
+	<A CLASS="eclass" HREF="base/linear_iterator_chart.html">LINEAR_ITERATOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that are able to iterate over linear structures</SPAN>
+
+	<A CLASS="eclass" HREF="base/linear_subset_chart.html">LINEAR_SUBSET</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Subsets that are traversable linearly without commitment to a concrete</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> implementation.</SPAN>
+
+	<A CLASS="eclass" HREF="base/linkable_chart.html">LINKABLE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Linkable cells containing a reference to their right neighbor</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_circular_chart.html">LINKED_CIRCULAR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Circular chains implemented as linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_list_chart.html">LINKED_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential, one-way linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_list_cursor_chart.html">LINKED_LIST_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_list_iteration_cursor_chart.html">LINKED_LIST_ITERATION_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Concrete of an external iteration cursor for </SPAN><A CLASS="eclass" HREF="base/linked_list_chart.html">LINKED_LIST</A><SPAN CLASS="ecomment">. Reversed traversal has a </SPAN>`(n (n + 1)) / 2'<SPAN CLASS="ecomment"> operations cost.</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_priority_queue_chart.html">LINKED_PRIORITY_QUEUE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Priority queues implemented as sorted lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_queue_chart.html">LINKED_QUEUE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unbounded queues implemented as linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_set_chart.html">LINKED_SET</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sets implemented by linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_stack_chart.html">LINKED_STACK</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unbounded stacks implemented as linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_tree_chart.html">LINKED_TREE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Trees implemented using a linked list representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/linked_tree_cursor_chart.html">LINKED_TREE_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for linked trees</SPAN>
+
+	<A CLASS="eclass" HREF="base/list_chart.html">LIST</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential lists, without commitment to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/loop_invariant_violation_chart.html">LOOP_INVARIANT_VIOLATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised for violated loop invariant</SPAN>
+
+	<A CLASS="eclass" HREF="base/machine_exception_chart.html">MACHINE_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Deferred class for machine exception, operation exceptions and hardware exceptions</SPAN>
+
+	<A CLASS="eclass" HREF="base/managed_pointer_chart.html">MANAGED_POINTER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> To easily manage allocation and release of allocated C memory, and</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to perform insertion of basic elements. Byte order is by default</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> platform specific.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Although memory allocation routines do not accept a zero sized pointer</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> MANAGED_POINTER does by allocating in fact a 1 byte sized pointer for</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> this particular case.</SPAN>
+
+	<A CLASS="eclass" HREF="base/math_const_chart.html">MATH_CONST</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic mathematical constants.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/memory_chart.html">MEMORY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Facilities for tuning up the garbage collection mechanism.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/memory_stream_chart.html">MEMORY_STREAM</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Stream of data stored in non Eiffel memory</SPAN>
+
+	<A CLASS="eclass" HREF="base/memory_structure_chart.html">MEMORY_STRUCTURE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Representation of a memory structure.</SPAN>
+
+	<A CLASS="eclass" HREF="base/mem_const_chart.html">MEM_CONST</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Constants used by memory management.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/mem_info_chart.html">MEM_INFO</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Properties of the memory management mechanism.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/mismatch_corrector_chart.html">MISMATCH_CORRECTOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Ancestor of all classes that need facility to retrieve an older version of an instance of current</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> class through storable.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Redefine </SPAN>`correct_mismatch'<SPAN CLASS="ecomment"> to get data from </SPAN>`mismatch_information'<SPAN CLASS="ecomment"> about found mismatch. A mismatch</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> might be the addition or the removal of an attribute as well as an attribute type change.</SPAN>
+
+	<A CLASS="eclass" HREF="base/mismatch_failure_chart.html">MISMATCH_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception for retrieval error, </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> may be raised by </SPAN>`retrieved'<SPAN CLASS="ecomment"> in </SPAN>`IO_MEDIUM'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/mismatch_information_chart.html">MISMATCH_INFORMATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Original values of the attributes of a mismatched object.</SPAN>
+
+	<A CLASS="eclass" HREF="base/multar_list_cursor_chart.html">MULTAR_LIST_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for multi-array trees</SPAN>
+
+	<A CLASS="eclass" HREF="base/multi_array_list_chart.html">MULTI_ARRAY_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Lists implemented as sequences of arrays, the last of which may</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> be non-full. No limit on size (a new array is allocated if list</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> outgrows its initial allocation).</SPAN>
+
+	<A CLASS="eclass" HREF="base/native_array_chart.html">NATIVE_ARRAY</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Fake abstraction of a .NET NATIVE_ARRAY in a non-.NET system</SPAN>
+
+	<A CLASS="eclass" HREF="base/native_string_chart.html">NATIVE_STRING</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Platform specific encoding of Unicode strings. By default, UTF-8 on unix or UTF-16 on Windows.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Mixed-encoding consideration</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ============================</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Most operating systems have conventions for strings that are incompatible with Unicode.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> On UNIX, a string is just a null-terminated byte sequence, it does not follow any</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> specific encoding. Usually the locale setting enables you to see the string the way</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> you expect.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> On Windows, the sequence of names is made of null-terminated UTF-16 code unit sequence. Windows</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> does not guarantee that the sequence is actually a valid UTF-16 sequence.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> In other words, when there is an invalid UTF-8 encoding on UNIX, or an invalid UTF-16 encoding</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> on Windows, the string is not directly representable as a Unicode string. To make it possible</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to create and store strings in a textually representable form, the query </SPAN>`string'<SPAN CLASS="ecomment"> will create</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> an encoded representation that can be then later used in </SPAN>`make'<SPAN CLASS="ecomment"> to create a NATIVE_STRING</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> equivalent to the original string. The encoding is described in UTF_CONVERTER's note clause</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and is a fourth variant of the recommended practice for replacement characters in Unicode</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (see </SPAN><A CLASS="ecomment" HREF="http://www.unicode.org/review/pr-121.html">http://www.unicode.org/review/pr-121.html</A><SPAN CLASS="ecomment">).</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+
+	<A CLASS="eclass" HREF="base/native_string_handler_chart.html">NATIVE_STRING_HANDLER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that can access low level features of </SPAN>`{FILE_INFO}'<SPAN CLASS="ecomment"> to access the underlying operating system encoding of file names.</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_16_chart.html">NATURAL_16</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unsigned integer values coded on 16 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_16_ref_chart.html">NATURAL_16_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an unsigned integer value coded on 16 bits.</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_32_chart.html">NATURAL_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unsigned integer values coded on 32 bits.</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_32_ref_chart.html">NATURAL_32_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an unsigned integer value coded on 32 bits.</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_64_chart.html">NATURAL_64</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unsigned integer values coded on 64 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_64_ref_chart.html">NATURAL_64_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an unsigned integer value coded on 64 bits.</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_8_chart.html">NATURAL_8</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Integer values coded on 8 bits</SPAN>
+
+	<A CLASS="eclass" HREF="base/natural_8_ref_chart.html">NATURAL_8_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing an unsigned integer value coded on 8 bits.</SPAN>
+
+	<A CLASS="eclass" HREF="base/no_more_memory_chart.html">NO_MORE_MEMORY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised when no more memory can be allocated.</SPAN>
+
+	<A CLASS="eclass" HREF="base/numeric_chart.html">NUMERIC</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects to which numerical operations are applicable</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: The model is that of a commutative ring.</SPAN>
+
+	<A CLASS="eclass" HREF="base/numeric_information_chart.html">NUMERIC_INFORMATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Information about integer, natural and real type in Eiffel</SPAN>
+
+	<A CLASS="eclass" HREF="base/object_graph_breadth_first_traversable_chart.html">OBJECT_GRAPH_BREADTH_FIRST_TRAVERSABLE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that traverse object graphs starting at the root object in a breadth first manner.</SPAN>
+
+	<A CLASS="eclass" HREF="base/object_graph_depth_first_traversable_chart.html">OBJECT_GRAPH_DEPTH_FIRST_TRAVERSABLE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that traverse object graphs starting at the root object in a depth first manner.</SPAN>
+
+	<A CLASS="eclass" HREF="base/object_graph_marker_chart.html">OBJECT_GRAPH_MARKER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Facility to mark objects once when traversing an object graph.</SPAN>
+
+	<A CLASS="eclass" HREF="base/object_graph_traversable_chart.html">OBJECT_GRAPH_TRAVERSABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Utility class to traverse object graphs starting at a root object.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> When traversing a graph the class distinguishes four different types of references:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (1) Normal references</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (2) References with copy-semantics, which are usually seen when attaching </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> an expanded object to an ANY reference</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (3) User-defined expanded objects, embedded inside another object. </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Semantically this is a special case of a copy-semantics reference.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (4) Language-defined expanded objects (INTEGER, POINTER etc) embedded inside another object. </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Semantically, this is a special case of a copy-semantics reference.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class will follow all reference types except (4). </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> During traversal the agent </SPAN>`on_processing_object_action'<SPAN CLASS="ecomment"> will be called for each object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and the agent </SPAN>`on_processing_reference_action'<SPAN CLASS="ecomment"> for each reference, if present. This includes</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> references to objects that have already been processed.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The algorighm has two output values: </SPAN>`visited_objects'<SPAN CLASS="ecomment"> and </SPAN>`visited_types'<SPAN CLASS="ecomment">:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Any standard object without copy-semantics (i.e. reference type (1)) will be stored</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> by aliasing inside </SPAN>`visited_object'<SPAN CLASS="ecomment">. For references of type (2) and (3) a copy will be stored.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The </SPAN>`visited_types'<SPAN CLASS="ecomment"> hash table contains the dynamic type id of all types encountered during </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> traversal. The key and value in the hashtable are the same.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Setting </SPAN>`is_skip_copy_semantics_reference'<SPAN CLASS="ecomment"> to true means that references of (2) and (3) will</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> not be stored in </SPAN>`visited_types'<SPAN CLASS="ecomment">. Note that this is the only effect of this setting - i.e.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the traversal algorithm will still follow the references, the agents will be called, and the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>`visited_types'<SPAN CLASS="ecomment"> array will be extended anyway.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> NOTE:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Due to a limitation in the reflection library, references of type (2) and (3) within TUPLE </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and references of type (3) within SPECIAL cannot be handled without causing a copy. This is </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> problematic for agents, especially when they want to change the object. Therefore</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the algorithm will raise an exception when an agent is attached.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> In read-only situations it may be acceptable to use a copy of an object. Therefore to disable the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> exception behaviour you can set </SPAN>`is_exception_on_copy_suppressed'<SPAN CLASS="ecomment"> to True.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> NOTE:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> To maintain backwards compatibility the traversal algorithm will silently ignore any kind of </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> exception and just return normally, with </SPAN>`traversed_objects'<SPAN CLASS="ecomment"> set to whatever value it had before </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> invoking </SPAN>`traverse'<SPAN CLASS="ecomment">. In order to get exceptions you need to set </SPAN>`is_exception_propagated'<SPAN CLASS="ecomment"> to True.</SPAN>
+
+	<A CLASS="eclass" HREF="base/obsolete_exception_chart.html">OBSOLETE_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Obsolete exception</SPAN>
+
+	<A CLASS="eclass" HREF="base/old_violation_chart.html">OLD_VIOLATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised when an old expression evaluation failure was recorded and the expression access is attempted in postcondition.</SPAN>
+
+	<A CLASS="eclass" HREF="base/operating_environment_chart.html">OPERATING_ENVIRONMENT</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The objects available from the operating system</SPAN>
+
+	<A CLASS="eclass" HREF="base/operating_system_exception_chart.html">OPERATING_SYSTEM_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Operating system exception</SPAN>
+
+	<A CLASS="eclass" HREF="base/operating_system_failure_chart.html">OPERATING_SYSTEM_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Operating system failure</SPAN>
+
+	<A CLASS="eclass" HREF="base/operating_system_signal_failure_chart.html">OPERATING_SYSTEM_SIGNAL_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Operating system signal failure</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/oxygen_chart.html">OXYGEN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><A CLASS="eclass" HREF="scoop_project/oxygen_chart.html">OXYGEN</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/oxygen_producer_chart.html">OXYGEN_PRODUCER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><A CLASS="eclass" HREF="scoop_project/oxygen_producer_chart.html">OXYGEN_PRODUCER</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/part_comparable_chart.html">PART_COMPARABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that may be compared according to a partial order relation</SPAN>
+
+	<A CLASS="eclass" HREF="base/part_sorted_list_chart.html">PART_SORTED_LIST</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/part_comparable_chart.html">PART_COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential lists whose items are sorted in ascending order</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> according to the relational operators of PART_COMPARABLE</SPAN>
+
+	<A CLASS="eclass" HREF="base/part_sorted_set_chart.html">PART_SORTED_SET</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/part_comparable_chart.html">PART_COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sets whose items may be compared according to a partial order relation</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> implemented as sorted two-way lists.</SPAN>
+
+	<A CLASS="eclass" HREF="base/part_sorted_two_way_list_chart.html">PART_SORTED_TWO_WAY_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/part_comparable_chart.html">PART_COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Two-way lists, kept sorted</SPAN>
+
+	<A CLASS="eclass" HREF="base/path_chart.html">PATH</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects representing a path, i.e. a way to identify a file or a directory for the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> current underlying platform. A path is made of two components:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 1 - an optional root which can either be:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> a - a drive letter followed by colon on Windows, i.e. &quot;C:&quot; or &quot;C:\&quot;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> b - &quot;/&quot; for UNIX root directory.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> c - &quot;\&quot; for Windows root directory.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> d - &quot;\\server\share&quot; or &quot;\\server\share\&quot; for Microsoft UNC path.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 2 - a sequence of zero or more names.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> A path is absolute if it has a root, and on windows if the root is a drive, then it should</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> be followed by &quot;\&quot;. Otherwise a path is relative.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Validity</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ========</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The current class will not check the validity of filenames. Check your file</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> system for your operating system manual for the list of invalid characters.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Windows consideration</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> =====================</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> When the root of a Windows path is a drive, be aware of the following behavior:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 1 - &quot;C:filename.txt&quot; refers to the file name &quot;filename.txt&quot; in the current directory </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;&nbsp;&nbsp;on drive &quot;C:&quot;.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 2 - &quot;C:sub\filename.txt&quot; refers to the file name &quot;filename.txt&quot; in a subdirectory &quot;sub&quot;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;&nbsp;&nbsp;of the current directory on drive &quot;C:&quot;.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 3 - &quot;C:\sub\filename.txt&quot; refers to the file name &quot;filename.txt&quot; in a subdirectory &quot;sub&quot;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;&nbsp;&nbsp;located at the root of the drive &quot;C:&quot;.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Both forward and backslashes are accepted, but forward slashes are internally converted</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to backward slashes whenever they are used to construct a path.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> On Windows, there is a limit of 259 characters for a path. If you need to create a larger</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> path, you can do so by using the following conventions which will let you have paths of</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> about 32,767 characters:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 1 - Use \\?\ for non-UNC path and let the rest unchanged.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 2 - Use \\?\UNC\server\share for UNC path and let the rest unchanged.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The above path cannot be used to specify a relative path.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> To know more about Windows paths, read the &quot;Naming Files, Paths, and Namespaces&quot;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> document located at:</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;&nbsp;</SPAN><A CLASS="ecomment" HREF="http://msdn.microsoft.com/en-us/library/windows/desktop/aa365247">http://msdn.microsoft.com/en-us/library/windows/desktop/aa365247</A><SPAN CLASS="ecomment">(v=vs.85).aspx</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Unicode consideration</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> =====================</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The PATH class treats strings as sequence of Unicode characters, i.e. an instance of </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> a READABLE_STRING_8 or descendant will be treated as if characters in the range</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 128 .. 255 were Unicode code points.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This contrasts to the FILE/DIRECTORY classes where to preserve backward compatibility, those</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> characters are treated as is.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Mixed-encoding consideration</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ============================</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Most operating systems have conventions for paths that are incompatible with Unicode.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> On UNIX, in a sequence of names, each name is just a null-terminated byte sequence, it</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> does not follow any specific encoding. Usually the locale setting enables you to see</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the filename the way you expect.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> On Windows, the sequence of names is made of null-terminated UTF-16 code unit sequence. Windows</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> does not guarantee that the sequence is actually a valid UTF-16 sequence.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> In other words, when there is an invalid UTF-8 encoding on UNIX, or an invalid UTF-16 encoding</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> on Windows, the filename is not directly representable as a Unicode string. To make it possible</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to create and store paths in a textually representable form, the query </SPAN>`name'<SPAN CLASS="ecomment"> will create</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> an encoded representation that can be then later used in </SPAN>`make_from_string'<SPAN CLASS="ecomment"> to create a PATH</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> equivalent to the original path. The encoding is described in UTF_CONVERTER's note clause</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and is a fourth variant of the recommended practice for replacement characters in Unicode</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (see </SPAN><A CLASS="ecomment" HREF="http://www.unicode.org/review/pr-121.html">http://www.unicode.org/review/pr-121.html</A><SPAN CLASS="ecomment">).</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Immutability</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ============</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Instances of the current class are immutable.</SPAN>
+
+	<A CLASS="eclass" HREF="base/path_name_chart.html">PATH_NAME</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Path name abstraction</SPAN>
+
+	<A CLASS="eclass" HREF="base/plain_text_file_chart.html">PLAIN_TEXT_FILE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Files viewed as persistent sequences of ASCII characters</SPAN>
+
+	<A CLASS="eclass" HREF="base/platform_chart.html">PLATFORM</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Platform-dependent properties.</SPAN>
+
+	<A CLASS="eclass" HREF="base/pointer_chart.html">POINTER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects meant to be exchanged with non-Eiffel software.</SPAN>
+
+	<A CLASS="eclass" HREF="base/pointer_ref_chart.html">POINTER_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing reference to object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> meant to be exchanged with non-Eiffel software.</SPAN>
+
+	<A CLASS="eclass" HREF="base/postcondition_violation_chart.html">POSTCONDITION_VIOLATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception representing a postcondition violation</SPAN>
+
+	<A CLASS="eclass" HREF="base/precondition_violation_chart.html">PRECONDITION_VIOLATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception representing an precondition violation.</SPAN>
+
+	<A CLASS="eclass" HREF="base/predicate_chart.html">PREDICATE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">OPEN_ARGS</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="base/tuple_chart.html">TUPLE</A> <SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="base/any.html#f_default_create">default_create</A> <SPAN CLASS="ekeyword">end</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects representing delayed calls to a boolean function,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> with some arguments possibly still open.</SPAN>
+
+	<A CLASS="eclass" HREF="base/primes_chart.html">PRIMES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Prime number properties</SPAN>
+
+	<A CLASS="eclass" HREF="base/priority_queue_chart.html">PRIORITY_QUEUE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/part_comparable_chart.html">PART_COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Priority queues, without commitment to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/procedure_chart.html">PROCEDURE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">OPEN_ARGS</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="base/tuple_chart.html">TUPLE</A> <SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="base/any.html#f_default_create">default_create</A> <SPAN CLASS="ekeyword">end</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects representing delayed calls to a procedure.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> with some operands possibly still open.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: Features are the same as those of ROUTINE,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> with </SPAN>`apply'<SPAN CLASS="ecomment"> made effective, and no further</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> redefinition of </SPAN><A CLASS="efeature" HREF="base/any.html#f_is_equal">is_equal</A><SPAN CLASS="ecomment"> and </SPAN><A CLASS="efeature" HREF="base/any.html#f_copy">copy</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="scoop_project/process_chart.html">PROCESS</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><A CLASS="eclass" HREF="scoop_project/process_chart.html">PROCESS</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/profiling_setting_chart.html">PROFILING_SETTING</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that manage the Eiffel profiler. You can start and</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> stop the Eiffel profiler whenever you want to. It only works</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> if </SPAN>`profile (yes)'<SPAN CLASS="ecomment"> is enabled in your project configuration file.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Also disabling the profiler should be done at the same place</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> where you enabled it otherwise you might corrupt the profiling data.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> To use this functionality effectively, make sure that the first instruction</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in your program calls </SPAN>`stop_profiling'<SPAN CLASS="ecomment">, and that the last executed instruction</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> calls </SPAN>`start_profiling'<SPAN CLASS="ecomment">, otherwise no profile information will be generated.</SPAN>
+
+	<A CLASS="eclass" HREF="base/proxy_comparable_chart.html">PROXY_COMPARABLE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Holder for non-comparable objects used for pseudo-comparison</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> with others via the use of a custom comparator.</SPAN>
+
+	<A CLASS="eclass" HREF="base/queue_chart.html">QUEUE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Queues (first-in, first-out dispensers), without commitment </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/random_chart.html">RANDOM</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Pseudo-random number sequence, linear congruential method</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class is adapted from work in &quot;Discrete-Event System Simulation&quot;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> by Jerry Banks &#38; John S. Carson, II</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Prentice-Hall International Series in</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Industrial and Systems Engineering 1984</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Example 7.12 p 266 which is from</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> IMSL Scientific Subroutine Package </SPAN><SPAN CLASS="ecomment">[1978]</SPAN><SPAN CLASS="ecomment">,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> written in Fortran for IBM 360/370 computers.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+
+	<A CLASS="eclass" HREF="base/raw_file_chart.html">RAW_FILE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Files, viewed as persistent sequences of bytes</SPAN>
+
+	<A CLASS="eclass" HREF="base/readable_indexable_chart.html">READABLE_INDEXABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Tables whose keys are integers in a contiguous interval</SPAN>
+
+	<A CLASS="eclass" HREF="base/readable_string_32_chart.html">READABLE_STRING_32</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequences of 32-bit characters, accessible through integer indices</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in a contiguous range. Read-only interface.</SPAN>
+
+	<A CLASS="eclass" HREF="base/readable_string_8_chart.html">READABLE_STRING_8</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequences of 8-bit characters, accessible through integer indices</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in a contiguous range. Read-only interface.</SPAN>
+
+	<A CLASS="eclass" HREF="base/readable_string_general_chart.html">READABLE_STRING_GENERAL</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Common ancestors to all STRING classes. Read-only interface.</SPAN>
+
+	<A CLASS="eclass" HREF="base/real_32_chart.html">REAL_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Real values, single precision</SPAN>
+
+	<A CLASS="eclass" HREF="base/real_32_ref_chart.html">REAL_32_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing a real value</SPAN>
+
+	<A CLASS="eclass" HREF="base/real_64_chart.html">REAL_64</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Real values, double precision</SPAN>
+
+	<A CLASS="eclass" HREF="base/real_64_ref_chart.html">REAL_64_REF</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing a double-precision real number</SPAN>
+
+	<A CLASS="eclass" HREF="base/recursive_cursor_tree_chart.html">RECURSIVE_CURSOR_TREE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursor trees with a recursive structure</SPAN>
+
+	<A CLASS="eclass" HREF="base/recursive_tree_cursor_chart.html">RECURSIVE_TREE_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for recursive trees</SPAN>
+
+	<A CLASS="eclass" HREF="base/refactoring_helper_chart.html">REFACTORING_HELPER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Collection of features that are used to mark</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> places in code that needs refactoring.</SPAN>
+
+	<A CLASS="eclass" HREF="base/reflected_copy_semantics_object_chart.html">REFLECTED_COPY_SEMANTICS_OBJECT</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Accessor to an object with copy semantics. Useful to manipulate fields of an object, or</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> an expanded field of an object without causing any copying.</SPAN>
+
+	<A CLASS="eclass" HREF="base/reflected_object_chart.html">REFLECTED_OBJECT</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Common ancestor for object inspection.</SPAN>
+
+	<A CLASS="eclass" HREF="base/reflected_reference_object_chart.html">REFLECTED_REFERENCE_OBJECT</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Accessor to an object. Useful to manipulate fields of an object, or</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> an expanded field of an object without causing any copying.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If applied to an expanded type, a copy will be manipulated.</SPAN>
+
+	<A CLASS="eclass" HREF="base/reflector_chart.html">REFLECTOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access to internal object properties.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/reflector_constants_chart.html">REFLECTOR_CONSTANTS</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Constants to represent abstract types in </SPAN><SPAN CLASS="ecomment">{</SPAN><SPAN CLASS="ecomment">REFFLECTOR</SPAN><SPAN CLASS="ecomment">}</SPAN><SPAN CLASS="ecomment"> and </SPAN><SPAN CLASS="ecomment">{</SPAN><SPAN CLASS="ecomment">OBJECT_PROXY</SPAN><SPAN CLASS="ecomment">}</SPAN><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/reflector_helper_chart.html">REFLECTOR_HELPER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Helper for routines in INTERNAL class.</SPAN>
+
+	<A CLASS="eclass" HREF="base/repeatable_chart.html">REPEATABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Object that may iterate over its own states.</SPAN>
+
+	<A CLASS="eclass" HREF="base/rescue_failure_chart.html">RESCUE_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised in rescue clause</SPAN>
+
+	<A CLASS="eclass" HREF="base/resizable_chart.html">RESIZABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Finite structures whose item count is subject to change</SPAN>
+
+	<A CLASS="eclass" HREF="base/resumption_failure_chart.html">RESUMPTION_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception raised when retry did not succeed</SPAN>
+
+	<A CLASS="eclass" HREF="base/routine_chart.html">ROUTINE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">OPEN_ARGS</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="base/tuple_chart.html">TUPLE</A> <SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="base/any.html#f_default_create">default_create</A> <SPAN CLASS="ekeyword">end</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects representing delayed calls to a routine,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> with some operands possibly still open</SPAN>
+
+	<A CLASS="eclass" HREF="base/routine_failure_chart.html">ROUTINE_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception representing a routine failure.</SPAN>
+
+	<A CLASS="eclass" HREF="base/rt_debugger_chart.html">RT_DEBUGGER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Set of features to access ISE debugger functionality from debuggee.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: do not try to evaluate the following feature in watch tool!</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_abstract_objects_table_chart.html">SED_ABSTRACT_OBJECTS_TABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Abstract equivalent of HASH_TABLE [NATURAL_32, ANY], since this type cannot be written</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> as ANY does not inherit from HASHABLE</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_basic_deserializer_chart.html">SED_BASIC_DESERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Decoding of arbitrary objects graphs between sessions of a same program.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_basic_serializer_chart.html">SED_BASIC_SERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Encoding of arbitrary objects graphs between sessions of a same program.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_binary_reader_writer_chart.html">SED_BINARY_READER_WRITER</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Ancestor to serialize/deserialize data using a buffer in binary format.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_error_chart.html">SED_ERROR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Simple representation of a SED error</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_error_factory_chart.html">SED_ERROR_FACTORY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that provide instances of SED_ERROR</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_independent_deserializer_chart.html">SED_INDEPENDENT_DESERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Decoding of arbitrary objects graphs between sessions of programs containing the same types. It basically takes care of potential reordering of attributes from one system to the other.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_independent_serializer_chart.html">SED_INDEPENDENT_SERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Encoding of arbitrary objects graphs between different version of programs containing the same types.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_medium_reader_writer_chart.html">SED_MEDIUM_READER_WRITER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Serialize/Deserialize data from a medium.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_medium_reader_writer_1_chart.html">SED_MEDIUM_READER_WRITER_1</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Serialize/Deserialize data from a medium.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_memory_reader_writer_chart.html">SED_MEMORY_READER_WRITER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Serialize/Deserialize data from memory.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_meta_model_chart.html">SED_META_MODEL</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Meta model representing a deserialized object. Useful for updating serialized data which might not be in sync with more recent version of the associated base class of the serialized object.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_multi_object_serialization_chart.html">SED_MULTI_OBJECT_SERIALIZATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Serialize and deserialize multiple objects into one file.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_objects_table_chart.html">SED_OBJECTS_TABLE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Equivalent of HASH_TABLE [NATURAL_32, ANY], since this type cannot be written</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> as ANY does not inherit from HASHABLE</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_reader_writer_chart.html">SED_READER_WRITER</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Ancestor for reading/writing basic known entities from and to a particular location specified in concrete descendants of current.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_recoverable_deserializer_chart.html">SED_RECOVERABLE_DESERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Decoding of arbitrary objects graphs between sessions of programs</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> containing the same types or potentially different types (which can</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> be mapped to the new type system via a correction mechanism,). It</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> also basically takes care of potential reordering of attributes</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> from one system to the other.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_recoverable_serializer_chart.html">SED_RECOVERABLE_SERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Encoding of arbitrary objects graphs between different version of</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> programs containing types that might have changed and for which the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> retrieving system may know how to fix the mismatches.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_session_deserializer_chart.html">SED_SESSION_DESERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Decoding of arbitrary objects graphs within a session of a same program.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_session_serializer_chart.html">SED_SESSION_SERIALIZER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Encoding of arbitrary objects graphs within a session of a same program.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Some routines are explicitely frozen, not because we do not want them to be redefined</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> but if they are frozen, it saves us having to look at all possible descendants whenever</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> we do a change.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_storable_facilities_chart.html">SED_STORABLE_FACILITIES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Serialize and deserialize objects to and from SED_READER_WRITER instances.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_type_mismatch_chart.html">SED_TYPE_MISMATCH</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Store all information about a mismatch in a type.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_utilities_chart.html">SED_UTILITIES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Utilities for serializing/deserializing objects</SPAN>
+
+	<A CLASS="eclass" HREF="base/sed_versions_chart.html">SED_VERSIONS</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Summary description for </SPAN><SPAN CLASS="ecomment">{</SPAN><SPAN CLASS="ecomment">SED_STORABLE_VERSIONS</SPAN><SPAN CLASS="ecomment">}</SPAN><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sequence_chart.html">SEQUENCE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Finite sequences: structures where existing items are arranged</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and accessed sequentially, and new ones can be added at the end.</SPAN>
+
+	<A CLASS="eclass" HREF="base/seq_string_chart.html">SEQ_STRING</A>
+
+	<A CLASS="eclass" HREF="base/serialization_failure_chart.html">SERIALIZATION_FAILURE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception for retrieval error, </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> may be raised by </SPAN>`retrieved'<SPAN CLASS="ecomment"> in </SPAN>`IO_MEDIUM'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/set_chart.html">SET</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Collection, where each element must be unique.</SPAN>
+
+	<A CLASS="eclass" HREF="base/shared_execution_environment_chart.html">SHARED_EXECUTION_ENVIRONMENT</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Shared instance of execution environment.</SPAN>
+
+	<A CLASS="eclass" HREF="base/single_math_chart.html">SINGLE_MATH</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic mathematical operations, single-precision.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities</SPAN>
+
+	<A CLASS="eclass" HREF="base/sorted_list_chart.html">SORTED_LIST</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential lists where the cells are sorted in ascending order</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> according to the relational operators of PART_COMPARABLE</SPAN>
+
+	<A CLASS="eclass" HREF="base/sorted_struct_chart.html">SORTED_STRUCT</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Structures whose items are sorted according to a total order relation</SPAN>
+
+	<A CLASS="eclass" HREF="base/sorted_two_way_list_chart.html">SORTED_TWO_WAY_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Two-way lists, kept sorted.</SPAN>
+
+	<A CLASS="eclass" HREF="base/special_chart.html">SPECIAL</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">T</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Special objects: homogeneous sequences of values,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> used to represent arrays and strings</SPAN>
+
+	<A CLASS="eclass" HREF="base/stack_chart.html">STACK</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Stacks (last-in, first-out dispensers), without commitment</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/std_files_chart.html">STD_FILES</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Commonly used input and output mechanisms.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as either ancestor or supplier</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/storable_chart.html">STORABLE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that may be stored and retrieved along with all their dependents.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/stream_chart.html">STREAM</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Implementation of the STORABLE mechanism with streams.</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_32_chart.html">STRING_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequences of 32-bit characters, accessible through integer indices</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in a contiguous range.</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_32_searcher_chart.html">STRING_32_SEARCHER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Helper to perform efficient search of a string in another one.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: The algorithm used is the one described in Communications of the ACM,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> volume 33, number 8, August 1990, by Daniel M. Sunday. The fuzzy</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> version was presented by Peter R. Sibbald in Communications of the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ACM, volume 35, number 4, April 1992 (Technical Correspondance).</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_8_chart.html">STRING_8</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequences of 8-bit characters, accessible through integer indices</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> in a contiguous range.</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_8_searcher_chart.html">STRING_8_SEARCHER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Helper to perform efficient search of a string in another one.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: The algorithm used is the one described in Communications of the ACM,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> volume 33, number 8, August 1990, by Daniel M. Sunday. The fuzzy</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> version was presented by Peter R. Sibbald in Communications of the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ACM, volume 35, number 4, April 1992 (Technical Correspondance).</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_general_chart.html">STRING_GENERAL</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Common ancestors to all STRING classes.</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_handler_chart.html">STRING_HANDLER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that can access </SPAN>`set_count'<SPAN CLASS="ecomment"> from STRING</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_iteration_cursor_chart.html">STRING_ITERATION_CURSOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> External iteration cursor on </SPAN><A CLASS="eclass" HREF="base/readable_string_general_chart.html">READABLE_STRING_GENERAL</A><SPAN CLASS="ecomment"> based on </SPAN><A CLASS="eclass" HREF="base/character_32_chart.html">CHARACTER_32</A><SPAN CLASS="ecomment"> item.</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_searcher_chart.html">STRING_SEARCHER</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Helper to perform efficient search of a string in another one.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Note: The algorithm used is the one described in Communications of the ACM,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> volume 33, number 8, August 1990, by Daniel M. Sunday. The fuzzy</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> version was presented by Peter R. Sibbald in Communications of the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ACM, volume 35, number 4, April 1992 (Technical Correspondance).</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_table_chart.html">STRING_TABLE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Hash tables, used to store items identified by string keys that are compared with or without case sensitivity.</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_to_integer_convertor_chart.html">STRING_TO_INTEGER_CONVERTOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Convertor to do string to integer/natural conversion</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_to_numeric_convertor_chart.html">STRING_TO_NUMERIC_CONVERTOR</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Abstract convertor for string to number conversion</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_to_real_convertor_chart.html">STRING_TO_REAL_CONVERTOR</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> String to real/double convertor</SPAN>
+
+	<A CLASS="eclass" HREF="base/string_tracing_handler_chart.html">STRING_TRACING_HANDLER</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Abstract class to dispatch tracing events to user using TYPE and STRING data.</SPAN>
+
+	<A CLASS="eclass" HREF="base/subset_chart.html">SUBSET</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Subsets with the associated operations,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> without commitment to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/subset_strategy_chart.html">SUBSET_STRATEGY</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Strategies for computing several features of subsets. The computing</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> strategy is optimized depending on the type of elements contained in</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the set.</SPAN>
+
+	<A CLASS="eclass" HREF="base/subset_strategy_generic_chart.html">SUBSET_STRATEGY_GENERIC</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Strategies for calculating several features for subsets containing</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> items of any type.</SPAN>
+
+	<A CLASS="eclass" HREF="base/subset_strategy_hashable_chart.html">SUBSET_STRATEGY_HASHABLE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Strategies for calculating several features for subsets containing</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> HASHABLEs.</SPAN>
+
+	<A CLASS="eclass" HREF="base/subset_strategy_tree_chart.html">SUBSET_STRATEGY_TREE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Strategies for calculating several features for subsets represented</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> by binary search trees. Contained items have to be COMPARABLE</SPAN>
+
+	<A CLASS="eclass" HREF="base/system_string_chart.html">SYSTEM_STRING</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Fake abstraction of a .NET SYSTEM_STRING in a non-.NET system</SPAN>
+
+	<A CLASS="eclass" HREF="base/system_string_factory_chart.html">SYSTEM_STRING_FACTORY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Factory for creating SYSTEM_STRING instances.</SPAN>
+
+	<A CLASS="eclass" HREF="base/sys_exception_chart.html">SYS_EXCEPTION</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Deferred class of all systematic exceptions</SPAN>
+
+	<A CLASS="eclass" HREF="base/table_chart.html">TABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="egeneric">H</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Containers whose items are accessible through keys</SPAN>
+
+	<A CLASS="eclass" HREF="base/table_iterable_chart.html">TABLE_ITERABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="egeneric">K</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Structure that can be iterated over using </SPAN>`across...loop...end'<SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> using </SPAN>`key'<SPAN CLASS="ecomment"> and </SPAN>`item'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/table_iteration_cursor_chart.html">TABLE_ITERATION_CURSOR</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="egeneric">K</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> External iteration cursor used by </SPAN>`across...loop...end'<SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> using </SPAN>`key'<SPAN CLASS="ecomment"> and </SPAN>`item'<SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/test_case_chart.html">TEST_CASE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Common ancestor of all test case classes</SPAN>
+
+	<A CLASS="eclass" HREF="base/to_special_chart.html">TO_SPECIAL</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">T</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to special objects, for direct access to arrays and strings</SPAN>
+
+	<A CLASS="eclass" HREF="base/tracing_handler_chart.html">TRACING_HANDLER</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Abstract class to dispatch tracing events to user. Tracing events are dispatched</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> by calling </SPAN>`activate'<SPAN CLASS="ecomment"> on the TRACING_HANDLER's instance.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;For each thread being created a copy of the current tracer object will be</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;used for the newly created thread to avoid race condition. It is up to the implementer</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;of the class to ensure proper thread-safety and to properly implement </SPAN>`duplicated'<SPAN CLASS="ecomment"> which</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> &nbsp;is by default implemented using </SPAN><A CLASS="efeature" HREF="base/any.html#f_twin">twin</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/tracing_setting_chart.html">TRACING_SETTING</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that manage the Eiffel tracing. You can start and</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> stop the Eiffel tracing whenever you want to. It only works</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> if </SPAN>`trace (yes)'<SPAN CLASS="ecomment"> is enabled in your project configuration file.</SPAN>
+
+	<A CLASS="eclass" HREF="base/traversable_chart.html">TRAVERSABLE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Structures for which there exists a traversal policy</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> that will visit every element exactly once.</SPAN>
+
+	<A CLASS="eclass" HREF="base/traversable_subset_chart.html">TRAVERSABLE_SUBSET</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Subsets that are traversable sequentially</SPAN>
+
+	<A CLASS="eclass" HREF="base/tree_chart.html">TREE</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Trees, without commitment to a particular representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/tuple_chart.html">TUPLE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Implementation of TUPLE</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_chain_iterator_chart.html">TWO_WAY_CHAIN_ITERATOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Objects that are able to iterate over two-way chains,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> on which they can perform repeated actions and tests according</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> to a number of predefined control structures such as `</SPAN>`if'<SPAN CLASS="ecomment">',</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> `</SPAN>`until'<SPAN CLASS="ecomment">' and others.</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_circular_chart.html">TWO_WAY_CIRCULAR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Circular chains implemented as two-way linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_list_chart.html">TWO_WAY_LIST</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sequential, two-way linked lists</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_list_cursor_chart.html">TWO_WAY_LIST_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for two way lists.</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_list_iteration_cursor_chart.html">TWO_WAY_LIST_ITERATION_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Concrete of an external iteration cursor for </SPAN><A CLASS="eclass" HREF="base/two_way_list_chart.html">TWO_WAY_LIST</A><SPAN CLASS="ecomment">.</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_sorted_set_chart.html">TWO_WAY_SORTED_SET</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN> <SPAN CLASS="esymbol">-&gt;</SPAN> <A CLASS="eclass" HREF="base/comparable_chart.html">COMPARABLE</A><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Sets whose items may be compared according to a total order relation;</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> implemented as sorted two-way lists.</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_tree_chart.html">TWO_WAY_TREE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Trees implemented using a two way linked list representation</SPAN>
+
+	<A CLASS="eclass" HREF="base/two_way_tree_cursor_chart.html">TWO_WAY_TREE_CURSOR</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Cursors for two-way trees</SPAN>
+
+	<A CLASS="eclass" HREF="base/type_chart.html">TYPE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Representation of an Eiffel type.</SPAN>
+
+	<A CLASS="eclass" HREF="base/typed_pointer_chart.html">TYPED_POINTER</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> References to objects containing reference to object</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> meant to be exchanged with non-Eiffel software.</SPAN>
+
+	<A CLASS="eclass" HREF="base/unbounded_chart.html">UNBOUNDED</A><SPAN CLASS="echar">*</SPAN> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Finite structures whose item count is not bounded</SPAN>
+
+	<A CLASS="eclass" HREF="base/unix_file_info_chart.html">UNIX_FILE_INFO</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Obsolete internal file information, use FILE_INFO directly.</SPAN>
+
+	<A CLASS="eclass" HREF="base/unix_signals_chart.html">UNIX_SIGNALS</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Constants used for signal handling.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> This class may be used as ancestor by classes needing its facilities.</SPAN>
+
+	<A CLASS="eclass" HREF="base/utf_converter_chart.html">UTF_CONVERTER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Converter from/to UTF-8, UTF-16 and UTF-32 encodings.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Handling of invalid encodings</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> =============================</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Whenever a UTF-8 or UTF-16 sequence is decoded, the decoding routines also check</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> that the sequence is valid. If it is not, it will replace the invalid unit (e.g. a byte</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> for UTF-8 and a 2-byte for UTF-16 by the replacement character U+FFFD as described by</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> variant #3 of the recommended practice for replacement character in Unicode (see</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN><A CLASS="ecomment" HREF="http://www.unicode.org/review/pr-121.html">http://www.unicode.org/review/pr-121.html</A><SPAN CLASS="ecomment"> for more details).</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> However it means that you cannot roundtrip incorrectly encoded sequence back and forth</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> between the encoded version and the decoded STRING_32 version. To allow roundtrip, an</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> escaped representation of a bad encoded sequence has been introduced. It is adding a</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> a fourth variant (which is a slight modification of variant #3) to the recommended</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> practice where the replacement character is followed by the printed hexadecimal value</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> of the invalid byte or the invalid 2-byte sequence.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> To provide an example (assuming that the Unicode character U+FFFD is represented as</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> ? textually):</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 1 - on UNIX, any invalid UTF-8 byte sequence such as 0x8F 0x8F is encoded as the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> following Unicode sequence: U+FFFD U+0038 U+0046 U+FFFF U+0038 U+0046, and textually</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> it looks like &quot;?8F?8F&quot;.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> 2 - on Windows, any invalid UTF-16 2-byte sequence such as 0xD800 0x0054 is encoded as the</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> following Unicode sequence: U+FFFD U+0075 U+0044 U+0038 U+0030 U+0030 U+FFFD U+0035 U+0033,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> and textually it looks like &quot;?uD800?54&quot;. The rule is that if the 2-byte sequence does not fit</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> into 1 byte, it uses the letter </SPAN>`u'<SPAN CLASS="ecomment"> followed by the hexadecimal value of the 2-byte sequence,</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> otherwise it simply uses the 1-byte hexadecimal representation.</SPAN>
+
+	<A CLASS="eclass" HREF="base/variant_violation_chart.html">VARIANT_VIOLATION</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Loop variant violation</SPAN>
+
+	<A CLASS="eclass" HREF="base/versionable_chart.html">VERSIONABLE</A><SPAN CLASS="echar">*</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Lightweight tracker of modifications made to instances of this class.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Any modification causes </SPAN>`version'<SPAN CLASS="ecomment"> to get a new value that can be used</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> by the clients to see if there were any changes since last access.</SPAN>
+
+	<A CLASS="eclass" HREF="base/void_assigned_to_expanded_chart.html">VOID_ASSIGNED_TO_EXPANDED</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception for assignment of void value to expanded entity</SPAN>
+
+	<A CLASS="eclass" HREF="base/void_target_chart.html">VOID_TARGET</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Exception for feature applied to void reference</SPAN>
+
+	<A CLASS="eclass" HREF="base/weak_reference_chart.html">WEAK_REFERENCE</A> <SPAN CLASS="esymbol">[</SPAN><SPAN CLASS="egeneric">G</SPAN><SPAN CLASS="esymbol">]</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Abstraction for weak references, i.e. references to object that can still be reclaimed by the GC.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> If the actual generic parameter is expanded, </SPAN>`put'<SPAN CLASS="ecomment"> cannot be used as it does not make sense from the user</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> point of view.</SPAN>
+
+<FORM ONSUBMIT="go_to('',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="nolink1">Classes</TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE=""></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>

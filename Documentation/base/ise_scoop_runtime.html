@@ -1,0 +1,112 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 15.12.9.8497 GPL Edition - unix">
+<meta name="description" content="Features to access and interact with the SCOOP runtime."/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="copyright" content="Copyright (c) 1984-2015, Eiffel Software and others"/>
+<meta name="license" content="Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"/>
+<meta name="source" content="Eiffel Software 5949 Hollister Ave., Goleta, CA 93117 USA Telephone 805-685-1006, Fax 805-685-6869 Website http://www.eiffel.com Customer support http://support.eiffel.com"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>ise_scoop_runtime Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="ise_scoop_runtime_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="ise_scoop_runtime_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="ise_scoop_runtime"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Features to access and interact with the SCOOP runtime.&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date: 2015-06-11 02:29:55 -0700 (Thu, 11 Jun 2015) $&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision: 97458 $&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../base/ise_scoop_runtime.html">ISE_SCOOP_RUNTIME</A>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../base/any.html#f_default_create">default_create</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access</SPAN>
+
+	<A NAME="f_invalid_region_id"></A><SPAN CLASS="ekeyword">frozen</SPAN> <A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_invalid_region_id">invalid_region_id</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_16.html">NATURAL_16</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The special region ID used for invalid regions.</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;C macro use %&quot;eif_scoop.h%&quot;&quot;
+		<SPAN CLASS="ekeyword">alias</SPAN>
+			&quot;EIF_NULL_PROCESSOR&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_region_id"></A><SPAN CLASS="ekeyword">frozen</SPAN> <A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_region_id">region_id</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../base/any.html">ANY</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_16.html">NATURAL_16</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The region ID on which </SPAN>`a_object'<SPAN CLASS="ecomment"> is placed.</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">Result</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_c_region_id">c_region_id</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">$</SPAN><SPAN CLASS="elocal">a_object</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/pointer_ref.html#f_item">to_pointer</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic operations</SPAN>
+
+	<A NAME="f_pin_to_thread"></A><A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_pin_to_thread">pin_to_thread</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Pin the current processor to its own thread.</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_c_disable_impersonation">c_disable_impersonation</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_c_region_id">c_region_id</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">$</SPAN><SPAN CLASS="ekeyword">Current</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/pointer_ref.html#f_item">to_pointer</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_pin_processor_to_thread"></A><A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_pin_processor_to_thread">pin_processor_to_thread</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../base/any.html">ANY</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Pin the processor behind the separate object </SPAN>`a_object'<SPAN CLASS="ecomment"> to its own thread.</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">ignored</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/pointer.html">POINTER</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">ignored</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">a_object</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/any.html#f_default_pointer">default_pointer</A>
+			<A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_c_disable_impersonation">c_disable_impersonation</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_c_region_id">c_region_id</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">$</SPAN><SPAN CLASS="elocal">a_object</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/pointer_ref.html#f_item">to_pointer</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Implementation</SPAN>
+
+	<A NAME="f_c_region_id"></A><SPAN CLASS="ekeyword">frozen</SPAN> <A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_c_region_id">c_region_id</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/pointer.html">POINTER</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_16.html">NATURAL_16</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> C exxternal for the region ID of an object.</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;C inline use %&quot;eif_macros.h%&quot;&quot;
+		<SPAN CLASS="ekeyword">alias</SPAN>
+			&quot;return RTS_PID($a_object)&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_c_disable_impersonation"></A><SPAN CLASS="ekeyword">frozen</SPAN> <A CLASS="efeature" HREF="../base/ise_scoop_runtime.html#f_c_disable_impersonation">c_disable_impersonation</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_pid</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_16.html">NATURAL_16</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> C external to disable impersonation for a specific processor.</SPAN>
+		<SPAN CLASS="ekeyword">external</SPAN>
+			&quot;C inline use %&quot;eif_scoop.h%&quot;&quot;
+		<SPAN CLASS="ekeyword">alias</SPAN>
+			&quot;eif_scoop_set_is_impersonation_allowed ($a_pid, EIF_FALSE)&quot;
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">copyright</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Copyright (c) 1984-2015, Eiffel Software and others&quot;</SPAN>
+	<SPAN CLASS="eitag">license</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Eiffel Forum License v2 (see </SPAN><A CLASS="estring" HREF="http://www.eiffel.com/licensing/forum.txt">http://www.eiffel.com/licensing/forum.txt</A><SPAN CLASS="estring">)&quot;</SPAN>
+	<SPAN CLASS="eitag">source</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;</SPAN><SPAN CLASS="estring">[</SPAN>
+		<SPAN CLASS="estring">Eiffel Software</SPAN>
+		<SPAN CLASS="estring">5949 Hollister Ave., Goleta, CA 93117 USA</SPAN>
+		<SPAN CLASS="estring">Telephone 805-685-1006, Fax 805-685-6869</SPAN>
+		<SPAN CLASS="estring">Website </SPAN><A CLASS="estring" HREF="http://www.eiffel.com">http://www.eiffel.com</A>
+		<SPAN CLASS="estring">Customer support </SPAN><A CLASS="estring" HREF="http://support.eiffel.com">http://support.eiffel.com</A>
+	<SPAN CLASS="estring">]</SPAN><SPAN CLASS="estring">&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../base/ise_scoop_runtime.html">ISE_SCOOP_RUNTIME</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="ise_scoop_runtime_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="ise_scoop_runtime_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="ise_scoop_runtime"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

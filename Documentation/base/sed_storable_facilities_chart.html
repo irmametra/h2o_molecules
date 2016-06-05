@@ -1,0 +1,65 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 15.12.9.8497 GPL Edition - unix">
+<meta name="description" content="Serialize and deserialize objects to and from SED_READER_WRITER instances."/>
+<meta name="legal" content="See notice at end of class."/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="library" content="EiffelBase: Library of reusable components for Eiffel."/>
+<meta name="copyright" content="Copyright (c) 1984-2014, Eiffel Software and others"/>
+<meta name="license" content="Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"/>
+<meta name="source" content="Eiffel Software 5949 Hollister Ave., Goleta, CA 93117 USA Telephone 805-685-1006, Fax 805-685-6869 Website http://www.eiffel.com Customer support http://support.eiffel.com"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>sed_storable_facilities Chart</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_storable_facilities_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_storable_facilities.html">Text</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="sed_storable_facilities"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">class</SPAN>
+	<A CLASS="eclass" HREF="../base/sed_storable_facilities_chart.html">SED_STORABLE_FACILITIES</A>
+
+<SPAN CLASS="ekeyword">General</SPAN>
+	<SPAN CLASS="eitag">cluster</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="necluster">ise</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Serialize and deserialize objects to and from SED_READER_WRITER instances.&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">Ancestors</SPAN>
+	<A CLASS="eclass" HREF="../base/any_chart.html">ANY</A>
+
+<SPAN CLASS="ekeyword">Queries</SPAN>
+	<SPAN TITLE="`eiffel_basic_store' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_eiffel_basic_store">Eiffel_basic_store</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_32_chart.html">NATURAL_32</A></SPAN>
+	<SPAN TITLE="`eiffel_independent_store' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_eiffel_independent_store">Eiffel_independent_store</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_32_chart.html">NATURAL_32</A></SPAN>
+	<SPAN TITLE="`eiffel_recoverable_store' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_eiffel_recoverable_store">Eiffel_recoverable_store</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_32_chart.html">NATURAL_32</A></SPAN>
+	<SPAN TITLE="`eiffel_session_store' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_eiffel_session_store">Eiffel_session_store</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/natural_32_chart.html">NATURAL_32</A></SPAN>
+	<SPAN TITLE="`retrieved' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_retrieved">retrieved</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_reader</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/sed_reader_writer_chart.html">SED_READER_WRITER</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_is_gc_enabled</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/boolean_chart.html">BOOLEAN</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../base/any_chart.html">ANY</A></SPAN>
+	<SPAN TITLE="`retrieved_errors' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_retrieved_errors">retrieved_errors</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../base/arrayed_list_chart.html">ARRAYED_LIST</A> <SPAN CLASS="esymbol">[</SPAN><A CLASS="eclass" HREF="../base/sed_error_chart.html">SED_ERROR</A><SPAN CLASS="esymbol">]</SPAN></SPAN>
+	<SPAN TITLE="`retrieved_from_medium' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_retrieved_from_medium">retrieved_from_medium</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_medium</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/io_medium_chart.html">IO_MEDIUM</A><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../base/any_chart.html">ANY</A></SPAN>
+
+<SPAN CLASS="ekeyword">Commands</SPAN>
+	<SPAN TITLE="`basic_store' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_basic_store">basic_store</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">an_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/any_chart.html">ANY</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_writer</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/sed_reader_writer_chart.html">SED_READER_WRITER</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_optimized_for_retrieval</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/boolean_chart.html">BOOLEAN</A><SPAN CLASS="esymbol">)</SPAN></SPAN>
+	<SPAN TITLE="`session_store' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_session_store">session_store</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">an_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/any_chart.html">ANY</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_writer</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/sed_reader_writer_chart.html">SED_READER_WRITER</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_optimized_for_retrieval</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/boolean_chart.html">BOOLEAN</A><SPAN CLASS="esymbol">)</SPAN></SPAN>
+	<SPAN TITLE="`store' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_store">store</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">an_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/any_chart.html">ANY</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_writer</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/sed_reader_writer_chart.html">SED_READER_WRITER</A><SPAN CLASS="esymbol">)</SPAN></SPAN>
+	<SPAN TITLE="`store_in_medium' is declared in `Current'"><A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_store_in_medium">store_in_medium</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">an_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/any_chart.html">ANY</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_medium</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/io_medium_chart.html">IO_MEDIUM</A><SPAN CLASS="esymbol">)</SPAN></SPAN>
+
+<FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="nolink2">Chart</TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_storable_facilities_links.html">Relations</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_storable_facilities.html">Text</A></TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="sed_storable_facilities"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>

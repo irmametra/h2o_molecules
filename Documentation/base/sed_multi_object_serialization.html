@@ -1,0 +1,198 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 15.12.9.8497 GPL Edition - unix">
+<meta name="description" content="Serialize and deserialize multiple objects into one file."/>
+<meta name="legal" content="See notice at end of class."/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="library" content="EiffelBase: Library of reusable components for Eiffel."/>
+<meta name="copyright" content="Copyright (c) 1984-2012, Eiffel Software and others"/>
+<meta name="license" content="Eiffel Forum License v2 (see http://www.eiffel.com/licensing/forum.txt)"/>
+<meta name="source" content="Eiffel Software 5949 Hollister Ave., Goleta, CA 93117 USA Telephone 805-685-1006, Fax 805-685-6869 Website http://www.eiffel.com Customer support http://support.eiffel.com"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>sed_multi_object_serialization Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_multi_object_serialization_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_multi_object_serialization_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="sed_multi_object_serialization"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Serialize and deserialize multiple objects into one file.&quot;</SPAN>
+	<SPAN CLASS="eitag">legal</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;See notice at end of class.&quot;</SPAN>
+	<SPAN CLASS="eitag">status</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;See notice at end of class.&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Date: 2013-05-20 16:15:17 -0700 (Mon, 20 May 2013) $&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision: 92557 $&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../base/sed_multi_object_serialization.html">SED_MULTI_OBJECT_SERIALIZATION</A>
+
+<SPAN CLASS="ekeyword">inherit</SPAN>
+	<A CLASS="eclass" HREF="../base/any.html">ANY</A>
+		<SPAN CLASS="ekeyword">redefine</SPAN>
+			<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_default_create">default_create</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A CLASS="eclass" HREF="../base/sed_storable_facilities.html">SED_STORABLE_FACILITIES</A>
+		<SPAN CLASS="ekeyword">export</SPAN>
+			<SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ekeyword">all</SPAN>
+		<SPAN CLASS="ekeyword">redefine</SPAN>
+			<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_default_create">default_create</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_default_create">default_create</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization</SPAN>
+
+	<A NAME="f_default_create"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_default_create">default_create</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Process instances of classes with no creation clause.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> (Default: do nothing.)</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_error_message">error_message</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/readable_string_general.html#f_make_empty">make_empty</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Access</SPAN>
+
+	<A NAME="f_deserialized_object"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_deserialized_object">deserialized_object</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../base/any.html">ANY</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Last deserialized object</SPAN>
+
+	<A NAME="f_last_file_position"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_last_file_position">last_file_position</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/integer_32.html">INTEGER_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Position after last serialization</SPAN>
+
+	<A NAME="f_error_message"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_error_message">error_message</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/string_32.html">STRING_32</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Reason for failure</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Status report</SPAN>
+
+	<A NAME="f_successful"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/boolean.html">BOOLEAN</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Was last retrieval successful?</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic Operations</SPAN>
+
+	<A NAME="f_deserialize"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_deserialize">deserialize</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">path</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/readable_string_general.html">READABLE_STRING_GENERAL</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">a_pos</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/integer_32.html">INTEGER_32</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Deserialize object previously serialized in </SPAN>`path'<SPAN CLASS="ecomment"> at position </SPAN>`a_pos'<SPAN CLASS="ecomment">.</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+			<SPAN CLASS="etag">non_void_path</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">path</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">valid_path</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">create</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../base/raw_file.html">RAW_FILE</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_make_with_name">make_with_name</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">path</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_exists">exists</A>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">retried</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/boolean.html">BOOLEAN</A>
+			<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../base/raw_file.html">RAW_FILE</A>
+			<SPAN CLASS="elocal">l_reader</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/sed_medium_reader_writer.html">SED_MEDIUM_READER_WRITER</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="ekeyword" HREF="../base/boolean.html#f_negated">not</A> <SPAN CLASS="elocal">retried</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_make_with_name">make_with_name</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_exists">exists</A> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_open_read">open_read</A>
+					<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_go">go</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_pos</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">l_reader</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/sed_medium_reader_writer.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+					<SPAN CLASS="elocal">l_reader</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/sed_binary_reader_writer.html#f_set_for_reading">set_for_reading</A>
+					<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">l_reader</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/sed_medium_reader_writer.html#f_is_ready_for_reading">is_ready_for_reading</A> <SPAN CLASS="ekeyword">then</SPAN>
+						<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_deserialized_object">deserialized_object</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_retrieved">retrieved</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">l_reader</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="ekeyword">True</SPAN><SPAN CLASS="esymbol">)</SPAN>
+						<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_deserialized_object">deserialized_object</A> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+					<SPAN CLASS="ekeyword">else</SPAN>
+						<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+					<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+				<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">l_raw_file</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <A CLASS="ekeyword" HREF="../base/boolean.html#f_conjuncted_semistrict">and then</A> <A CLASS="ekeyword" HREF="../base/boolean.html#f_negated">not</A> <SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_is_closed">is_closed</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_close">close</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">ensure</SPAN>
+			<SPAN CLASS="etag">deserialized_object_set_if_no_error</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A> <A CLASS="ekeyword" HREF="../base/boolean.html#f_implication">implies</A> <A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_deserialized_object">deserialized_object</A> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">rescue</SPAN>
+			<SPAN CLASS="ekeyword">debug</SPAN> <SPAN CLASS="esymbol">(</SPAN>&quot;log_exceptions&quot;<SPAN CLASS="esymbol">)</SPAN>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_log_last_exception">log_last_exception</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="elocal">retried</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+			<SPAN CLASS="ekeyword">retry</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Basic Operations</SPAN>
+
+	<A NAME="f_serialize"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_serialize">serialize</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/any.html">ANY</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">path</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/readable_string_general.html">READABLE_STRING_GENERAL</A><SPAN CLASS="esymbol">;</SPAN> <SPAN CLASS="elocal">is_appending</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/boolean.html">BOOLEAN</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Serialize object </SPAN>`a'<SPAN CLASS="ecomment"> at the end of file </SPAN>`path'<SPAN CLASS="ecomment"> if </SPAN>`is_appending'<SPAN CLASS="ecomment">, otherwise</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> reset content of </SPAN>`path'<SPAN CLASS="ecomment">.</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Set </SPAN><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_last_file_position">last_file_position</A><SPAN CLASS="ecomment"> after storing.</SPAN>
+		<SPAN CLASS="ekeyword">require</SPAN>
+			<SPAN CLASS="etag">non_void_object</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">a</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+			<SPAN CLASS="etag">non_void_path</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="elocal">path</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">detachable</SPAN> <A CLASS="eclass" HREF="../base/raw_file.html">RAW_FILE</A>
+			<SPAN CLASS="elocal">l_writer</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/sed_medium_reader_writer.html">SED_MEDIUM_READER_WRITER</A>
+			<SPAN CLASS="elocal">retried</SPAN><SPAN CLASS="esymbol">:</SPAN> <A CLASS="eclass" HREF="../base/boolean.html">BOOLEAN</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <A CLASS="ekeyword" HREF="../base/boolean.html#f_negated">not</A> <SPAN CLASS="elocal">retried</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_make_with_name">make_with_name</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">is_appending</SPAN> <SPAN CLASS="ekeyword">then</SPAN>
+					<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_open_append">open_append</A>
+				<SPAN CLASS="ekeyword">else</SPAN>
+					<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_open_write">open_write</A>
+				<SPAN CLASS="ekeyword">end</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">l_writer</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/sed_medium_reader_writer.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<SPAN CLASS="elocal">l_writer</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/sed_binary_reader_writer.html#f_set_for_writing">set_for_writing</A>
+				<A CLASS="efeature" HREF="../base/sed_storable_facilities.html#f_store">store</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a</SPAN><SPAN CLASS="esymbol">,</SPAN> <SPAN CLASS="elocal">l_writer</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_last_file_position">last_file_position</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_count">count</A>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+			<SPAN CLASS="ekeyword">else</SPAN>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_successful">successful</A> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">False</SPAN>
+				<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_error_message">error_message</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/readable_string_32.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">100</SPAN><SPAN CLASS="esymbol">)</SPAN>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_error_message">error_message</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/string_32.html#f_append_string_general">append_string_general</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;Cannot store into &quot;<SPAN CLASS="esymbol">)</SPAN>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_error_message">error_message</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/string_32.html#f_append_string_general">append_string_general</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">path</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="ekeyword">if</SPAN> <SPAN CLASS="elocal">l_raw_file</SPAN> <SPAN CLASS="esymbol">/=</SPAN> <SPAN CLASS="ekeyword">Void</SPAN> <A CLASS="ekeyword" HREF="../base/boolean.html#f_conjuncted_semistrict">and then</A> <A CLASS="ekeyword" HREF="../base/boolean.html#f_negated">not</A> <SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_is_closed">is_closed</A> <SPAN CLASS="ekeyword">then</SPAN>
+				<SPAN CLASS="elocal">l_raw_file</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../base/file.html#f_close">close</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+		<SPAN CLASS="ekeyword">rescue</SPAN>
+			<SPAN CLASS="ekeyword">debug</SPAN> <SPAN CLASS="esymbol">(</SPAN>&quot;log_exceptions&quot;<SPAN CLASS="esymbol">)</SPAN>
+				<A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_log_last_exception">log_last_exception</A>
+			<SPAN CLASS="ekeyword">end</SPAN>
+			<SPAN CLASS="elocal">retried</SPAN> <SPAN CLASS="esymbol">:=</SPAN> <SPAN CLASS="ekeyword">True</SPAN>
+			<SPAN CLASS="ekeyword">retry</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Logging</SPAN>
+
+	<A NAME="f_log_last_exception"></A><A CLASS="efeature" HREF="../base/sed_multi_object_serialization.html#f_log_last_exception">log_last_exception</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Log last exception.</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">library</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;EiffelBase: Library of reusable components for Eiffel.&quot;</SPAN>
+	<SPAN CLASS="eitag">copyright</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Copyright (c) 1984-2012, Eiffel Software and others&quot;</SPAN>
+	<SPAN CLASS="eitag">license</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Eiffel Forum License v2 (see </SPAN><A CLASS="estring" HREF="http://www.eiffel.com/licensing/forum.txt">http://www.eiffel.com/licensing/forum.txt</A><SPAN CLASS="estring">)&quot;</SPAN>
+	<SPAN CLASS="eitag">source</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;</SPAN><SPAN CLASS="estring">[</SPAN>
+		<SPAN CLASS="estring">Eiffel Software</SPAN>
+		<SPAN CLASS="estring">5949 Hollister Ave., Goleta, CA 93117 USA</SPAN>
+		<SPAN CLASS="estring">Telephone 805-685-1006, Fax 805-685-6869</SPAN>
+		<SPAN CLASS="estring">Website </SPAN><A CLASS="estring" HREF="http://www.eiffel.com">http://www.eiffel.com</A>
+		<SPAN CLASS="estring">Customer support </SPAN><A CLASS="estring" HREF="http://support.eiffel.com">http://support.eiffel.com</A>
+	<SPAN CLASS="estring">]</SPAN><SPAN CLASS="estring">&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../base/sed_multi_object_serialization.html">SED_MULTI_OBJECT_SERIALIZATION</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_multi_object_serialization_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="sed_multi_object_serialization_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="sed_multi_object_serialization"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

@@ -1,6 +1,7 @@
 note
 	description: "Summary description for {ATOM_QUEUE}."
-	date: "$Date$"
+	author: "Irma Metra & Danilo Figueira Mendonça"
+	date: "May 2016"
 	revision: "$Revision$"
 
 class
@@ -12,13 +13,13 @@ create
 feature -- Initialization
 
 	make
-			-- Creation procedure			
+			-- Creation procedure
 		do
 			queue_size := 0
 			counter := 0
 		end
 
-feature{HYDROGEN, OXYGEN} -- Restricted access to atoms
+feature {HYDROGEN, OXYGEN} -- Restricted access to only atom classes
 
 	add_atom
 		do
@@ -40,7 +41,7 @@ feature{HYDROGEN, OXYGEN} -- Restricted access to atoms
 
 	check_queue (size: INTEGER): BOOLEAN
 		do
-			io.put_string ("queue size:" + queue_size.out +"%N")
+			io.put_string ("queue size:" + queue_size.out + "%N")
 			Result := queue_size >= size
 		end
 
@@ -70,6 +71,7 @@ feature{HYDROGEN, OXYGEN} -- Restricted access to atoms
 feature {NONE}
 
 	queue_size: INTEGER
+
 	counter: INTEGER
 
 invariant

@@ -1,7 +1,7 @@
 note
 	description: "Summary description for {OXYGEN}."
-	author: ""
-	date: "$Date$"
+	author: "Irma Metra & Danilo Figueira Mendonça"
+	date: "May 2016"
 	revision: "$Revision$"
 
 class
@@ -17,7 +17,7 @@ feature -- Initialization
 			--`a_max' is the maximum number of atoms of hydrogen to be produced
 			--`a_hydrogen_queue' is the shared queue storing hydrogen atoms
 			--`an_oxygen_queue' is the shared queue storing oxigen atoms
-			--`a_barrier' is shared barrier where two hydrogen atoms and one oxygen atom must bond for a molecule to be ready	
+			--`a_barrier' is shared barrier where two hydrogen atoms and one oxygen atom must bond for a molecule to be ready
 		require
 			an_id >= 0
 			a_hydrogen_queue /= void
@@ -89,8 +89,11 @@ feature {NONE}
 feature {NONE}
 
 	hydrogen_queue: separate ATOM_QUEUE
+
 	oxygen_queue: separate ATOM_QUEUE
+
 	barrier: separate BARRIER
+
 	id: INTEGER
 
 invariant

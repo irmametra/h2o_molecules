@@ -1,13 +1,16 @@
 note
-	description: "A process that produces n < MAX hydrogen atoms as separated objects"
-	date: "$Date$"
+	description: "A class that represents a process that produces n < MAX hydrogen atoms as separated objects"
+	author: "Irma Metra & Danilo Figueira Mendonça"
+	date: "May 2016"
 	revision: "$Revision$"
 
 class
 	HYDROGEN_PRODUCER
 
 inherit
+
 	PROCESS
+
 	EXECUTION_ENVIRONMENT
 
 create
@@ -16,11 +19,11 @@ create
 feature -- Initialization
 
 	make (a_hydrogen_queue: separate ATOM_QUEUE; an_oxygen_queue: separate ATOM_QUEUE; a_barrier: separate BARRIER; a_max: INTEGER)
-			--Creation Procedure		
+			--Creation Procedure
 			--`a_max' is the maximum number of atoms of hydrogen to be produced
 			--`a_hydrogen_queue' is the shared queue storing hydrogen atoms
 			--`an_oxygen_queue' is the shared queue storing oxigen atoms
-			--`a_barrier' is shared barrier where two hydrogen atoms and one oxygen atom must bond for a molecule to be ready	
+			--`a_barrier' is shared barrier where two hydrogen atoms and one oxygen atom must bond for a molecule to be ready
 		require
 			a_max >= 0
 			a_hydrogen_queue /= void
@@ -45,8 +48,8 @@ feature {NONE} -- Access
 			counter := counter + 1
 			io.put_string ("Producing atom HYDROGEN ID (" + counter.out + ") %N")
 			create hydrogen.make (counter, hydrogen_queue, oxygen_queue, barrier) --create the hydrogen the queue
-			produce_hydrogen(hydrogen, hydrogen_queue)
-			sleep((1_000_000_000 * random_number_generator.real_i_th(counter)).floor)
+			produce_hydrogen (hydrogen, hydrogen_queue)
+			sleep ((1_000_000_000 * random_number_generator.real_i_th (counter)).floor)
 		end
 
 	over: BOOLEAN
@@ -64,10 +67,15 @@ feature {NONE} -- Access
 feature {NONE}
 
 	max: INTEGER
+
 	counter: INTEGER
+
 	hydrogen_queue: separate ATOM_QUEUE
+
 	oxygen_queue: separate ATOM_QUEUE
+
 	barrier: separate BARRIER
+
 	random_number_generator: RANDOM
 
 invariant

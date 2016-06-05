@@ -1,7 +1,7 @@
 note
-	description: "Summary description for {PROCESS}."
-	author: ""
-	date: "$Date$"
+	description: "General characteristics of a process."
+	author: "Irma Metra & Danilo Figueira Mendonça"
+	date: "May 2016"
 	revision: "$Revision$"
 
 deferred class
