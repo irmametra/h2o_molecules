@@ -15,6 +15,9 @@
 				<exclude>/CVS$</exclude>
 				<exclude>/EIFGENs$</exclude>
 			</file_rule>
+			<file_rule>
+				<exclude>^Documentation$</exclude>
+			</file_rule>
 		</cluster>
 	</target>
 </system>
