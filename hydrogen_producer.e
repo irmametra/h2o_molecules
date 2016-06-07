@@ -55,7 +55,7 @@ feature {NONE} -- Access
 	over: BOOLEAN
 			-- Has the MAX number of atoms been produced?
 		do
-			Result := counter = max - 1
+			Result := counter = max
 		end
 
 	produce_hydrogen (a_hydrogen: separate HYDROGEN; my_hydrogen_queue: separate ATOM_QUEUE)
@@ -79,7 +79,7 @@ feature {NONE}
 	random_number_generator: RANDOM
 
 invariant
-	counter < max
+	counter <= max
 	hydrogen_queue /= void
 	oxygen_queue /= void
 	counter >= 0
