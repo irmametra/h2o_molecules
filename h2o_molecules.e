@@ -17,6 +17,7 @@ create
 feature -- Initialization
 
 	make
+		-- Creation procedure
 		local
 			hydrogen_producer: separate HYDROGEN_PRODUCER
 			oxygen_producer: separate OXYGEN_PRODUCER
@@ -34,20 +35,22 @@ feature -- Initialization
 		end
 
 	launch_process (a_producer: separate PROCESS)
+			-- Launches a separated {PROCESS} object by calling its live method
+			-- `a_producer' the {PROCESS} object to be launched
 		do
 			a_producer.live
 		end
 
 feature {NONE} -- class variables
 
-	number_of_hydrogens: INTEGER = 20
+	number_of_hydrogens: INTEGER = 20 -- max number of hydrogens atoms to be created
 
-	number_of_oxygens: INTEGER = 10
+	number_of_oxygens: INTEGER = 10 -- max number of oxygen atoms to be created
 
-	hydrogen_queue: separate ATOM_QUEUE
+	hydrogen_queue: separate ATOM_QUEUE -- the hydrogen atom queue
 
-	oxygen_queue: separate ATOM_QUEUE
+	oxygen_queue: separate ATOM_QUEUE -- the oxygen atom queue
 
-	barrier: separate BARRIER
+	barrier: separate BARRIER -- the barrier used for bonding
 
 end

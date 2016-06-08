@@ -90,13 +90,13 @@ feature {NONE}
 
 feature {NONE}
 
-	hydrogen_queue: separate ATOM_QUEUE
+	hydrogen_queue: separate ATOM_QUEUE -- a reference to the hydrogen atoms queue
 
-	oxygen_queue: separate ATOM_QUEUE
+	oxygen_queue: separate ATOM_QUEUE -- a reference to the oxygen atoms queue
 
-	barrier: separate BARRIER
+	barrier: separate BARRIER -- a reference to the barrier
 
-	id: INTEGER
+	id: INTEGER -- id of this atom
 
 invariant
 	hydrogen_queue /= void
