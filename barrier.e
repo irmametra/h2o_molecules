@@ -26,7 +26,7 @@ feature
 feature {HYDROGEN, OXYGEN}
 
 	bond
-			-- Increases the bounds counter in the barrier.
+			-- Increases the bonds counter in the barrier.
 		do
 			bond_counter := bond_counter + 1
 			if bond_counter = max then
@@ -57,10 +57,10 @@ feature {HYDROGEN, OXYGEN}
 
 feature {NONE}
 
-	max: INTEGER
+	max: INTEGER -- The max number of bonds before passing the barrier
 
 	bond_counter: INTEGER -- The number of atoms that have bonded
-	
+
 	pass_counter: INTEGER -- The number of atoms that have passed
 
 invariant

@@ -1,0 +1,96 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 16.05.9.8814 GPL Edition - unix">
+<meta name="description" content="H2O molecules prduction root class"/>
+<meta name="author" content="Irma Metra & Danilo Figueira Mendonça"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>h2o_molecules Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="h2o_molecules_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="h2o_molecules_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="h2o_molecules"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;H2O molecules prduction root class&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Irma Metra &#38; Danilo Figueira Mendonça&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;May 2016&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../scoop_project/h2o_molecules.html">H2O_MOLECULES</A>
+
+<SPAN CLASS="ekeyword">inherit</SPAN>
+	<SPAN CLASS="neclass">ARGUMENTS</SPAN>
+
+<SPAN CLASS="ekeyword">create</SPAN> 
+	<A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_make">make</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Initialization</SPAN>
+
+	<A NAME="f_make"></A><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_make">make</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Creation procedure</SPAN>
+		<SPAN CLASS="ekeyword">local</SPAN>
+			<SPAN CLASS="elocal">hydrogen_producer</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../scoop_project/hydrogen_producer.html">HYDROGEN_PRODUCER</A>
+			<SPAN CLASS="elocal">oxygen_producer</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../scoop_project/oxygen_producer.html">OXYGEN_PRODUCER</A>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;----Starting H2O production----%N&quot;<SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_hydrogen_queue">hydrogen_queue</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/atom_queue.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../scoop_project/atom_queue.html">ATOM_QUEUE</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/atom_queue.html#f_type_hydrogen">type_hydrogen</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_oxygen_queue">oxygen_queue</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/atom_queue.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="esymbol">{</SPAN><A CLASS="eclass" HREF="../scoop_project/atom_queue.html">ATOM_QUEUE</A><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/atom_queue.html#f_type_oxygen">type_oxygen</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_barrier">barrier</A><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/barrier.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="enumber">3</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">hydrogen_producer</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/hydrogen_producer.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_hydrogen_queue">hydrogen_queue</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_oxygen_queue">oxygen_queue</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_barrier">barrier</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_number_of_hydrogens">Number_of_hydrogens</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <SPAN CLASS="elocal">oxygen_producer</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/oxygen_producer.html#f_make">make</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_hydrogen_queue">hydrogen_queue</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_oxygen_queue">oxygen_queue</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_barrier">barrier</A><SPAN CLASS="esymbol">,</SPAN> <A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_number_of_oxygens">Number_of_oxygens</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;Launching Hydrogen producer %N&quot;<SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_launch_process">launch_process</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">hydrogen_producer</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="nefeature">Io</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">put_string</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN>&quot;Launching Oxygen producer %N&quot;<SPAN CLASS="esymbol">)</SPAN>
+			<A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_launch_process">launch_process</A><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">oxygen_producer</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_launch_process"></A><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_launch_process">launch_process</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">a_producer</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../scoop_project/process.html">PROCESS</A><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Launches a separated </SPAN><A CLASS="eclass" HREF="../scoop_project/process.html">PROCESS</A><SPAN CLASS="ecomment"> object by calling its live method</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> </SPAN>`a_producer'<SPAN CLASS="ecomment"> the </SPAN><A CLASS="eclass" HREF="../scoop_project/process.html">PROCESS</A><SPAN CLASS="ecomment"> object to be launched</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="elocal">a_producer</SPAN><SPAN CLASS="edot">.</SPAN><A CLASS="efeature" HREF="../scoop_project/process.html#f_live">live</A>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> <SPAN CLASS="esymbol">{</SPAN>NONE<SPAN CLASS="esymbol">}</SPAN> <SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> class variables</SPAN>
+
+	<A NAME="f_number_of_hydrogens"></A><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_number_of_hydrogens">Number_of_hydrogens</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">20</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> max number of hydrogens atoms to be created</SPAN>
+
+	<A NAME="f_number_of_oxygens"></A><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_number_of_oxygens">Number_of_oxygens</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN> <SPAN CLASS="esymbol">=</SPAN> <SPAN CLASS="enumber">10</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> max number of oxygen atoms to be created</SPAN>
+
+	<A NAME="f_hydrogen_queue"></A><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_hydrogen_queue">hydrogen_queue</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../scoop_project/atom_queue.html">ATOM_QUEUE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the hydrogen atom queue</SPAN>
+
+	<A NAME="f_oxygen_queue"></A><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_oxygen_queue">oxygen_queue</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../scoop_project/atom_queue.html">ATOM_QUEUE</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the oxygen atom queue</SPAN>
+
+	<A NAME="f_barrier"></A><A CLASS="efeature" HREF="../scoop_project/h2o_molecules.html#f_barrier">barrier</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="ekeyword">separate</SPAN> <A CLASS="eclass" HREF="../scoop_project/barrier.html">BARRIER</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> the barrier used for bonding</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../scoop_project/h2o_molecules.html">H2O_MOLECULES</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="h2o_molecules_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="h2o_molecules_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="h2o_molecules"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

@@ -1,0 +1,39 @@
+<!--
+	classList = new Array (
+		"ATOM_QUEUE",
+		"BARRIER",
+		"H2O_MOLECULES",
+		"HYDROGEN",
+		"HYDROGEN_PRODUCER",
+		"OXYGEN",
+		"OXYGEN_PRODUCER",
+		"PROCESS"
+	);
+
+	locationList = new Array (
+		"scoop_project/atom_queue_chart.html",
+		"scoop_project/barrier_chart.html",
+		"scoop_project/h2o_molecules_chart.html",
+		"scoop_project/hydrogen_chart.html",
+		"scoop_project/hydrogen_producer_chart.html",
+		"scoop_project/oxygen_chart.html",
+		"scoop_project/oxygen_producer_chart.html",
+		"scoop_project/process_chart.html"
+	);
+
+	function indexOfClass (name) {
+		for (i = 0; i < classList.length; i++) {
+			if (name == classList[i]) return i;
+		}
+		return -1;
+	};
+
+	function go_to (baseLocation, className) {
+		var index = indexOfClass (className.toUpperCase ());
+		if (index >= 0) {
+			window.location = baseLocation + locationList[index];
+		} else {
+			alert ("Class " + className.toUpperCase () + " does not exist in system");
+		}
+	}
+// -->

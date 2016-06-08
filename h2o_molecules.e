@@ -23,8 +23,8 @@ feature -- Initialization
 			oxygen_producer: separate OXYGEN_PRODUCER
 		do
 			io.put_string ("----Starting H2O production----%N")
-			create hydrogen_queue.make
-			create oxygen_queue.make
+			create hydrogen_queue.make({ATOM_QUEUE}.TYPE_HYDROGEN)
+			create oxygen_queue.make({ATOM_QUEUE}.TYPE_OXYGEN)
 			create barrier.make (3)
 			create hydrogen_producer.make (hydrogen_queue, oxygen_queue, barrier, number_of_hydrogens)
 			create oxygen_producer.make (hydrogen_queue, oxygen_queue, barrier, number_of_oxygens)

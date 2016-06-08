@@ -1,0 +1,173 @@
+----Starting H2O production----
+Launching Hydrogen producer 
+Launching Oxygen producer 
+Producing atom HYDROGEN ID (1) 
+Producing atom OXYGEN ID (1)  
+Adding atom to the hydrogen queue 
+Adding atom to the oxygen queue 
+Producing atom HYDROGEN ID (2) 
+Adding atom to the hydrogen queue 
+Hydrogen Check: Atoms set complete for a molecule 
+2 atom(s) removed from hydrogen queue (queue size: 0)
+1 atom(s) removed from oxygen queue (queue size: 0)
+Hydrogen-1 bonded 
+Oxygen-1 bonded 
+Hydrogen-2 bonded 
+Molecule ready in the barrier 
+Hydrogen-1 passed 
+Oxygen-1 passed 
+Hydrogen-2 passed 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (3) 
+Adding atom to the hydrogen queue 
+Producing atom OXYGEN ID (2)  
+Adding atom to the oxygen queue 
+Producing atom HYDROGEN ID (4) 
+Adding atom to the hydrogen queue 
+Hydrogen Check: Atoms set complete for a molecule 
+2 atom(s) removed from hydrogen queue (queue size: 0)
+1 atom(s) removed from oxygen queue (queue size: 0)
+Hydrogen-4 bonded 
+Oxygen-2 bonded 
+Hydrogen-3 bonded 
+Molecule ready in the barrier 
+Hydrogen-4 passed 
+Oxygen-2 passed 
+Hydrogen-3 passed 
+Molecule passed the barrier 
+Producing atom OXYGEN ID (3)  
+Adding atom to the oxygen queue 
+Producing atom HYDROGEN ID (5) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (6) 
+Adding atom to the hydrogen queue 
+Hydrogen Check: Atoms set complete for a molecule 
+1 atom(s) removed from oxygen queue (queue size: 0)
+2 atom(s) removed from hydrogen queue (queue size: 0)
+Oxygen-3 bonded 
+Hydrogen-5 bonded 
+Hydrogen-6 bonded 
+Molecule ready in the barrier 
+Oxygen-3 passed 
+Hydrogen-5 passed 
+Hydrogen-6 passed 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (7) 
+Adding atom to the hydrogen queue 
+Producing atom OXYGEN ID (4)  
+Adding atom to the oxygen queue 
+Producing atom HYDROGEN ID (8) 
+Adding atom to the hydrogen queue 
+Hydrogen Check: Atoms set complete for a molecule 
+1 atom(s) removed from oxygen queue (queue size: 0)
+2 atom(s) removed from hydrogen queue (queue size: 0)
+Hydrogen-8 bonded 
+Hydrogen-7 bonded 
+Oxygen-4 bonded 
+Molecule ready in the barrier 
+Hydrogen-8 passed 
+Hydrogen-7 passed 
+Oxygen-4 passed 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (9) 
+Adding atom to the hydrogen queue 
+Producing atom OXYGEN ID (5)  
+Adding atom to the oxygen queue 
+Producing atom HYDROGEN ID (10) 
+Adding atom to the hydrogen queue 
+Hydrogen Check: Atoms set complete for a molecule 
+1 atom(s) removed from oxygen queue (queue size: 0)
+2 atom(s) removed from hydrogen queue (queue size: 0)
+Oxygen-5 bonded 
+Hydrogen-10 bonded 
+Hydrogen-9 bonded 
+Molecule ready in the barrier 
+Oxygen-5 passed 
+Hydrogen-10 passed 
+Hydrogen-9 passed 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (11) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (12) 
+Adding atom to the hydrogen queue 
+Producing atom OXYGEN ID (6)  
+Adding atom to the oxygen queue 
+Oxygen Check: Atoms set complete for a molecule 
+2 atom(s) removed from hydrogen queue (queue size: 0)
+1 atom(s) removed from oxygen queue (queue size: 0)
+Oxygen-6 bonded 
+Hydrogen-12 bonded 
+Hydrogen-11 bonded 
+Molecule ready in the barrier 
+Oxygen-6 passed 
+Hydrogen-12 passed 
+Hydrogen-11 passed 
+Molecule passed the barrier 
+Producing atom OXYGEN ID (7)  
+Adding atom to the oxygen queue 
+Producing atom HYDROGEN ID (13) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (14) 
+Adding atom to the hydrogen queue 
+Hydrogen Check: Atoms set complete for a molecule 
+1 atom(s) removed from oxygen queue (queue size: 0)
+2 atom(s) removed from hydrogen queue (queue size: 0)
+Oxygen-7 bonded 
+Hydrogen-14 bonded 
+Hydrogen-13 bonded 
+Molecule ready in the barrier 
+Oxygen-7 passed 
+Hydrogen-14 passed 
+Hydrogen-13 passed 
+Molecule passed the barrier 
+Producing atom HYDROGEN ID (15) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (16) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (17) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (18) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (19) 
+Adding atom to the hydrogen queue 
+Producing atom HYDROGEN ID (20) 
+Adding atom to the hydrogen queue 
+Producing atom OXYGEN ID (8)  
+Adding atom to the oxygen queue 
+Oxygen Check: Atoms set complete for a molecule 
+2 atom(s) removed from hydrogen queue (queue size: 4)
+1 atom(s) removed from oxygen queue (queue size: 0)
+Oxygen-8 bonded 
+Hydrogen-20 bonded 
+Hydrogen-16 bonded 
+Molecule ready in the barrier 
+Oxygen-8 passed 
+Hydrogen-16 passed 
+Hydrogen-20 passed 
+Molecule passed the barrier 
+Producing atom OXYGEN ID (9)  
+Adding atom to the oxygen queue 
+Oxygen Check: Atoms set complete for a molecule 
+2 atom(s) removed from hydrogen queue (queue size: 2)
+1 atom(s) removed from oxygen queue (queue size: 0)
+Oxygen-9 bonded 
+Hydrogen-17 bonded 
+Hydrogen-15 bonded 
+Molecule ready in the barrier 
+Hydrogen-15 passed 
+Hydrogen-17 passed 
+Oxygen-9 passed 
+Molecule passed the barrier 
+Producing atom OXYGEN ID (10)  
+Adding atom to the oxygen queue 
+Oxygen Check: Atoms set complete for a molecule 
+1 atom(s) removed from oxygen queue (queue size: 0)
+2 atom(s) removed from hydrogen queue (queue size: 0)
+Oxygen-10 bonded 
+Hydrogen-18 bonded 
+Hydrogen-19 bonded 
+Molecule ready in the barrier 
+Oxygen-10 passed 
+Hydrogen-18 passed 
+Hydrogen-19 passed 
+Molecule passed the barrier

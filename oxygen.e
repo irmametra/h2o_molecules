@@ -53,7 +53,7 @@ feature {NONE}
 			-- Signalize that a molecule is ready if two hydrogen atoms are available
 		do
 			if (my_hydrogen_queue.check_queue (2)) then
-				io.put_string ("Oxygen: molecule ready to be relased %N")
+				io.put_string ("Oxygen Check: Atoms set complete for a molecule %N")
 				my_hydrogen_queue.consume_atoms (2)
 				my_oxygen_queue.consume_atoms (1)
 				my_hydrogen_queue.increase_counter (2)
@@ -67,7 +67,6 @@ feature {NONE}
 			my_oxygen_queue.check_counter (1)
 		do
 			my_oxygen_queue.decrease_counter (1)
-			io.put_string ("Oxygen-" + id.out + " released %N")
 		end
 
 	barrier_bond (my_barrier: separate BARRIER)
