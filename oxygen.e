@@ -36,9 +36,9 @@ feature
 		do
 			increment_atom (oxygen_queue)
 			check_molecule (hydrogen_queue, oxygen_queue)
-			wait_oxygen (oxygen_queue)
+			atom_wait (oxygen_queue)
 			barrier_bond (barrier)
-			wait_in_the_barrier (barrier)
+			barrier_wait (barrier)
 		end
 
 feature {NONE}
@@ -61,7 +61,7 @@ feature {NONE}
 			end
 		end
 
-	wait_oxygen (my_oxygen_queue: separate ATOM_QUEUE)
+	atom_wait (my_oxygen_queue: separate ATOM_QUEUE)
 			-- waits for the molecule to be ready
 		require
 			my_oxygen_queue.check_counter (1)
@@ -76,7 +76,7 @@ feature {NONE}
 			my_barrier.bond
 		end
 
-	wait_in_the_barrier (my_barrier: separate BARRIER)
+	barrier_wait (my_barrier: separate BARRIER)
 			-- waits in the barrier until all molecule atoms have bonded
 		require
 			my_barrier.wait
