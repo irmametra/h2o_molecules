@@ -17,7 +17,7 @@ create
 feature -- Initialization
 
 	make
-		-- Creation procedure
+			-- Creation procedure
 		local
 			a_hydrogen: separate HYDROGEN
 			an_oxygen: separate OXYGEN
@@ -29,7 +29,7 @@ feature -- Initialization
 			io.put_string ("Launching Hydrogen producer %N")
 			io.put_string ("Launching Oxygen producer %N")
 
-			from -- make all savages and launch them to eat
+			from -- make all oxygen and hydrogen and launch them to eat
 				i := 1
 			until
 				i > number_of_molecules

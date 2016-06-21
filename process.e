@@ -10,6 +10,7 @@ deferred class
 
 feature
 	make_random_generator
+			-- Creates a random generator using the current time as a seed
 		do
 			create l_time.make_now
 		    l_seed := l_time.hour
@@ -23,7 +24,7 @@ feature
 feature
 
 	live
-			-- Should execution terminate now?
+			-- The behavior of this atom
 		deferred
 		end
 
@@ -35,9 +36,9 @@ feature
 
 feature
 
-	l_time: TIME
+	l_time: TIME -- current time used to generate a seed
 
-    l_seed: INTEGER
+    l_seed: INTEGER -- a seed used by the random generator
 
-	random_number_generator: RANDOM
+	random_number_generator: RANDOM -- used to generate random intervals for atoms
 end

@@ -23,16 +23,19 @@ feature {HYDROGEN, OXYGEN}
 
 
 	has_space_for_oxygen:BOOLEAN
+			-- Checks if there is space for oxygen in the barrier
 		do
 			Result := oxygens < 1
 		end
 
 	has_space_for_hydrogen:BOOLEAN
+			-- Checks if there is space for hydrogen in the barrier
 		do
 			Result := hydrogens < 2
 		end
 
 	increment_oxygen
+			-- Increments the number of oxygens in the barrier
 		do
 			oxygens := oxygens + 1
 		ensure
@@ -40,6 +43,7 @@ feature {HYDROGEN, OXYGEN}
 		end
 
 	increment_hydrogen
+			-- Increments the number of hydrogens in the barrier
 		do
 			hydrogens := hydrogens + 1
 		ensure
@@ -47,7 +51,7 @@ feature {HYDROGEN, OXYGEN}
 		end
 
 	try_bond
-			-- Checks if there is space for an oxygen atom in the barrier
+			-- Checks if a molecule is ready before reseting it
 		do
 			if oxygens = 1 and hydrogens = 2 then
 				io.put_string ("Molecule ready %N")
@@ -71,7 +75,7 @@ feature {NONE}
 		end
 
 
-feature {NONE}
+feature {NONE} -- class variables
 
 	oxygens: INTEGER -- The number of atoms that have bonded
 

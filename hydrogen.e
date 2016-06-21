@@ -31,6 +31,8 @@ feature -- Initialization
 feature
 
 	live
+			-- The behavior of a hydrogen atom
+			-- It waits a random interval from 0 - 800ms before trying to bond to avoid deterministic traces
 		do
 			delay ((800 * random_number_generator.real_i_th (id)).floor)
 			try_bond (barrier)
@@ -39,12 +41,13 @@ feature
 feature {NONE}
 
 	increment_atom(my_barrier: separate BARRIER)
+			-- Separate call to increment the nuber of hydrogen atoms in the barrier
 		do
 			my_barrier.increment_hydrogen
 		end
 
 	try_bond (my_barrier: separate BARRIER)
-			-- try to bond the atom in the barrier
+			-- try to bond the hydrogen atom in the barrier
 		require
 			my_barrier.has_space_for_hydrogen
 		do
