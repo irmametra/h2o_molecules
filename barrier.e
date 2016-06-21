@@ -12,61 +12,75 @@ create
 
 feature
 
-	make (a_max: INTEGER)
+	make
 			-- Creation procedure
-			--`a_max' the number of atoms before the barrier releases a molecule
-		require
-			a_max > 0
 		do
-			max := a_max
-			bond_counter := 0
-			pass_counter := max
+			oxygens := 0
+			hydrogens := 0
 		end
 
 feature {HYDROGEN, OXYGEN}
 
-	bond
-			-- Increases the bonds counter in the barrier.
+
+	has_space_for_oxygen:BOOLEAN
 		do
-			bond_counter := bond_counter + 1
-			if bond_counter = max then
-				io.put_string ("Molecule ready in the barrier %N")
-			end
-		ensure
-			bond_counter = old bond_counter + 1
+			Result := oxygens < 1
 		end
 
-	pass
-			-- Decreases the number of atoms that passed the barrier. If zero, resets the barrier.
+	has_space_for_hydrogen:BOOLEAN
 		do
-			pass_counter := pass_counter - 1
-			if pass_counter = 0 then
-				pass_counter := max
-				bond_counter := 0
-				io.put_string ("Molecule passed the barrier %N")
-			end
-		ensure
-			if old pass_counter = 1 then pass_counter = max and bond_counter = 0 else pass_counter = old pass_counter - 1 end
+			Result := hydrogens < 2
 		end
 
-	wait: BOOLEAN
-			-- Check if the number of atom bonds reached max
+	increment_oxygen
 		do
-			Result := bond_counter = max
+			oxygens := oxygens + 1
+		ensure
+			oxygens = old oxygens + 1
+		end
+
+	increment_hydrogen
+		do
+			hydrogens := hydrogens + 1
+		ensure
+			hydrogens = old hydrogens + 1
+		end
+
+	try_bond
+			-- Checks if there is space for an oxygen atom in the barrier
+		do
+			if oxygens = 1 and hydrogens = 2 then
+				io.put_string ("Molecule ready %N")
+				reset_barrier
+			end
+		ensure
+			if old oxygens = 1 and old hydrogens = 2 then oxygens = 0 and hydrogens = 0 else oxygens = old oxygens and hydrogens = old hydrogens end
 		end
 
 feature {NONE}
 
-	max: INTEGER -- The max number of bonds before passing the barrier
+	reset_barrier
+			-- Resets the oxygen and hydrogen counters
+		require
+			oxygens = 1 and hydrogens = 2
+		do
+			oxygens := 0
+			hydrogens := 0
+		ensure
+			oxygens = 0 and hydrogens = 0
+		end
 
-	bond_counter: INTEGER -- The number of atoms that have bonded
 
-	pass_counter: INTEGER -- The number of atoms that have passed
+feature {NONE}
+
+	oxygens: INTEGER -- The number of atoms that have bonded
+
+	hydrogens: INTEGER -- The number of atoms that have passed
 
 invariant
-	bond_counter >= 0
-	bond_counter <= max
-	pass_counter >= 0
-	pass_counter <= max
+	oxygens >= 0
+	oxygens <= 1
+	hydrogens >= 0
+	hydrogens <= 2
 
 end

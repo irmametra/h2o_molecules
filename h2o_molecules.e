@@ -19,37 +19,43 @@ feature -- Initialization
 	make
 		-- Creation procedure
 		local
-			hydrogen_producer: separate HYDROGEN_PRODUCER
-			oxygen_producer: separate OXYGEN_PRODUCER
+			a_hydrogen: separate HYDROGEN
+			an_oxygen: separate OXYGEN
+			i: INTEGER
 		do
 			io.put_string ("----Starting H2O production----%N")
-			create hydrogen_queue.make({ATOM_QUEUE}.TYPE_HYDROGEN)
-			create oxygen_queue.make({ATOM_QUEUE}.TYPE_OXYGEN)
-			create barrier.make (3)
-			create hydrogen_producer.make (hydrogen_queue, oxygen_queue, barrier, number_of_hydrogens)
-			create oxygen_producer.make (hydrogen_queue, oxygen_queue, barrier, number_of_oxygens)
+
+			create barrier.make
 			io.put_string ("Launching Hydrogen producer %N")
-			launch_process (hydrogen_producer)
 			io.put_string ("Launching Oxygen producer %N")
-			launch_process (oxygen_producer)
+
+			from -- make all savages and launch them to eat
+				i := 1
+			until
+				i > number_of_molecules
+			loop
+				create a_hydrogen.make (i, barrier)
+				launch_process (a_hydrogen)
+				create a_hydrogen.make (i + 1, barrier)
+				launch_process (a_hydrogen)
+				create an_oxygen.make ((i/2).ceiling, barrier)
+				launch_process (an_oxygen)
+				i := i + 2
+			end
+
 		end
 
-	launch_process (a_producer: separate PROCESS)
+	launch_process (a_process: separate PROCESS)
 			-- Launches a separated {PROCESS} object by calling its live method
-			-- `a_producer' the {PROCESS} object to be launched
+			-- `a_process' the {PROCESS} object to be launched
 		do
-			a_producer.live
+			a_process.live
 		end
 
 feature {NONE} -- class variables
 
-	number_of_hydrogens: INTEGER = 20 -- max number of hydrogens atoms to be created
 
-	number_of_oxygens: INTEGER = 10 -- max number of oxygen atoms to be created
-
-	hydrogen_queue: separate ATOM_QUEUE -- the hydrogen atom queue
-
-	oxygen_queue: separate ATOM_QUEUE -- the oxygen atom queue
+	number_of_molecules: INTEGER = 20 -- the number of molecules to be produced
 
 	barrier: separate BARRIER -- the barrier used for bonding
 
