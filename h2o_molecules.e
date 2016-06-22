@@ -22,17 +22,30 @@ feature -- Initialization
 			a_hydrogen: separate HYDROGEN
 			an_oxygen: separate OXYGEN
 			i: INTEGER
+			atoms: INTEGER
 		do
-			io.put_string ("----Starting H2O production----%N")
 
-			create barrier.make
+
+			if attached separate_character_option_value ('m') as l_val then
+                print ("Number of Molecules: ")
+                io.read_integer
+                number_of_molecules := io.last_integer
+            else
+            	number_of_molecules := 20
+            end
+			
+			io.put_string ("----Starting H2O production----%N")
 			io.put_string ("Launching Hydrogen producer %N")
 			io.put_string ("Launching Oxygen producer %N")
 
+			create barrier.make
+
+			io.put_string ("Barrier created %N")
+			atoms := number_of_molecules * 2
 			from -- make all oxygen and hydrogen and launch them to eat
 				i := 1
 			until
-				i > number_of_molecules
+				i > atoms
 			loop
 				create a_hydrogen.make (i, barrier)
 				launch_process (a_hydrogen)
@@ -54,9 +67,7 @@ feature -- Initialization
 
 feature {NONE} -- class variables
 
-
-	number_of_molecules: INTEGER = 20 -- the number of molecules to be produced
-
+	number_of_molecules: INTEGER
 	barrier: separate BARRIER -- the barrier used for bonding
 
 end
