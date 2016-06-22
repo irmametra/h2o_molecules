@@ -45,7 +45,7 @@ feature -- Initialization
 
 		end
 
-	launch_process (a_process: separate PROCESS)
+	launch_process (a_process: separate ATOM)
 			-- Launches a separated {PROCESS} object by calling its live method
 			-- `a_process' the {PROCESS} object to be launched
 		do

@@ -5,7 +5,7 @@ note
 	revision: "$Revision$"
 
 deferred class
-	PROCESS
+	ATOM
 
 
 feature
@@ -33,6 +33,7 @@ feature
 		do
 			(create {EXECUTION_ENVIRONMENT}).sleep (milliseconds * 1_000_000)
 		end
+
 
 feature
 
