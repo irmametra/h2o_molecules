@@ -33,7 +33,7 @@ feature -- Initialization
 			-- The behavior of an oxygen atom
 			-- It waits a random interval from 0 - 400ms before trying to bond to avoid deterministic traces
 			delay ((400 * random_number_generator.real_i_th (id)).floor)
-			bond (barrier)
+			try_bond (barrier)
 
 		end
 
@@ -46,7 +46,7 @@ feature {NONE}
 			my_barrier.increment_oxygen
 		end
 
-	bond(my_barrier: separate BARRIER)
+	try_bond(my_barrier: separate BARRIER)
 			-- try to bond the oxygen atom in the barrier
 		require
 			my_barrier.has_space_for_oxygen

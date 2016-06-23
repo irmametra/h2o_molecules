@@ -35,7 +35,7 @@ feature
 			-- It waits a random interval from 0 - 800ms before trying to bond to avoid deterministic traces
 		do
 			delay ((800 * random_number_generator.real_i_th (id)).floor)
-			bond (barrier)
+			try_bond (barrier)
 		end
 
 feature {NONE}
@@ -46,7 +46,7 @@ feature {NONE}
 			my_barrier.increment_hydrogen
 		end
 
-	bond(my_barrier: separate BARRIER)
+	try_bond(my_barrier: separate BARRIER)
 			-- try to bond the hydrogen atom in the barrier
 		require
 			my_barrier.has_space_for_hydrogen
