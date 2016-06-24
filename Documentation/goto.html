@@ -1,0 +1,33 @@
+<!--
+	classList = new Array (
+		"ATOM",
+		"BARRIER",
+		"H2O_MOLECULES",
+		"HYDROGEN",
+		"OXYGEN"
+	);
+
+	locationList = new Array (
+		"h2o_molecules/atom_chart.html",
+		"h2o_molecules/barrier_chart.html",
+		"h2o_molecules/h2o_molecules_chart.html",
+		"h2o_molecules/hydrogen_chart.html",
+		"h2o_molecules/oxygen_chart.html"
+	);
+
+	function indexOfClass (name) {
+		for (i = 0; i < classList.length; i++) {
+			if (name == classList[i]) return i;
+		}
+		return -1;
+	};
+
+	function go_to (baseLocation, className) {
+		var index = indexOfClass (className.toUpperCase ());
+		if (index >= 0) {
+			window.location = baseLocation + locationList[index];
+		} else {
+			alert ("Class " + className.toUpperCase () + " does not exist in system");
+		}
+	}
+// -->

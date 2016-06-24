@@ -1,0 +1,84 @@
+<HTML>
+<HEAD>
+<META NAME="generator" CONTENT="ISE EiffelStudio version 16.05.9.8814 GPL Edition - unix">
+<meta name="description" content="General characteristics of a process."/>
+<meta name="author" content="Irma Metra & Danilo Figueira Mendonça"/>
+<meta name="keywords" content="Eiffel class"/>
+<meta name="keywords" content="Eiffel class"/>
+<TITLE>atom Text</TITLE>
+<LINK REL="stylesheet" HREF="../default.css" TYPE="text/css">
+<SCRIPT TYPE="text/javascript" SRC="../goto.html"></SCRIPT>
+</HEAD>
+<BODY>
+<P ALIGN="CENTER">Automatic generation produced by ISE Eiffel</P>
+<pre><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="atom_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="atom_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="atom"></TD>
+</TR></TABLE></FORM><SPAN CLASS="ekeyword">note</SPAN>
+	<SPAN CLASS="eitag">description</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;General characteristics of a process.&quot;</SPAN>
+	<SPAN CLASS="eitag">author</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;Irma Metra &#38; Danilo Figueira Mendonça&quot;</SPAN>
+	<SPAN CLASS="eitag">date</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;May 2016&quot;</SPAN>
+	<SPAN CLASS="eitag">revision</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="estring">&quot;$Revision$&quot;</SPAN>
+
+<SPAN CLASS="ekeyword">deferred</SPAN> <SPAN CLASS="ekeyword">class</SPAN> 
+	<A CLASS="eclass" HREF="../h2o_molecules/atom.html">ATOM</A>
+
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_make_random_generator"></A><A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_make_random_generator">make_random_generator</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Creates a random generator using the current time as a seed</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_time">l_time</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make_now</SPAN>
+			<A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_time">l_time</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">hour</SPAN>
+			<A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A> <SPAN CLASS="esymbol">*</SPAN> <SPAN CLASS="enumber">60</SPAN> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_time">l_time</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">minute</SPAN>
+			<A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A> <SPAN CLASS="esymbol">*</SPAN> <SPAN CLASS="enumber">60</SPAN> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_time">l_time</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">second</SPAN>
+			<A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A> <SPAN CLASS="esymbol">:=</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A> <SPAN CLASS="esymbol">*</SPAN> <SPAN CLASS="enumber">1000</SPAN> <SPAN CLASS="esymbol">+</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_time">l_time</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">milli_second</SPAN>
+			<SPAN CLASS="ekeyword">create</SPAN> <A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_random_number_generator">random_number_generator</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">make</SPAN>
+			<A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_random_number_generator">random_number_generator</A><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">set_seed</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_live"></A><A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_live">live</A>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> The behavior of this atom</SPAN>
+		<SPAN CLASS="ekeyword">deferred</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+
+	<A NAME="f_delay"></A><A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_delay">delay</A> <SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">milliseconds</SPAN><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_64</SPAN><SPAN CLASS="esymbol">)</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> Delay execution by </SPAN>`milliseconds'<SPAN CLASS="ecomment">.</SPAN>
+		<SPAN CLASS="ekeyword">do</SPAN>
+			<SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="ekeyword">create</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">{</SPAN><SPAN CLASS="neclass">EXECUTION_ENVIRONMENT</SPAN><SPAN CLASS="esymbol">}</SPAN><SPAN CLASS="esymbol">)</SPAN><SPAN CLASS="edot">.</SPAN><SPAN CLASS="nefeature">sleep</SPAN><SPAN CLASS="esymbol"> </SPAN><SPAN CLASS="esymbol">(</SPAN><SPAN CLASS="elocal">milliseconds</SPAN> <SPAN CLASS="esymbol">*</SPAN> <SPAN CLASS="enumber">1000000</SPAN><SPAN CLASS="esymbol">)</SPAN>
+		<SPAN CLASS="ekeyword">end</SPAN>
+	
+<SPAN CLASS="ekeyword">feature</SPAN> 
+
+	<A NAME="f_l_time"></A><A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_time">l_time</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">TIME</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> current time used to generate a seed</SPAN>
+
+	<A NAME="f_l_seed"></A><A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_l_seed">l_seed</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">INTEGER_32</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> a seed used by the random generator</SPAN>
+
+	<A NAME="f_random_number_generator"></A><A CLASS="efeature" HREF="../h2o_molecules/atom.html#f_random_number_generator">random_number_generator</A><SPAN CLASS="esymbol">:</SPAN> <SPAN CLASS="neclass">RANDOM</SPAN>
+			<SPAN CLASS="ecomment">--</SPAN><SPAN CLASS="ecomment"> used to generate random intervals for atoms</SPAN>
+	
+<SPAN CLASS="ekeyword">end</SPAN> <SPAN CLASS="ecomment">--</SPAN> <SPAN CLASS="ecomment">class </SPAN><A CLASS="eclass" HREF="../h2o_molecules/atom.html">ATOM</A><FORM ONSUBMIT="go_to('../',this.c.value);return false;">
+<TABLE CELLSPACING="5" CELLPADDING="4"><TR>
+<TD CLASS="link1"><A CLASS="link1" HREF="../class_list.html">Classes</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_list.html">Clusters</A></TD>
+<TD CLASS="link1"><A CLASS="link1" HREF="../cluster_hierarchy.html">Cluster hierarchy</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="atom_chart.html">Chart</A></TD>
+<TD CLASS="link2"><A CLASS="link2" HREF="atom_links.html">Relations</A></TD>
+<TD CLASS="nolink2">Text</TD>
+<TD CLASS="link2">Go to: <INPUT NAME="c" VALUE="atom"></TD>
+</TR></TABLE></FORM></pre>
+<P ALIGN="CENTER"> &#045;&#045; Generated by ISE Eiffel &#045;&#045; 
+<BR>For more details: <A HREF="http://www.eiffel.com">www.eiffel.com</A></P>
+</BODY>
+</HTML>
+

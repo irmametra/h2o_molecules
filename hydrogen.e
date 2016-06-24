@@ -8,6 +8,7 @@ class
 	HYDROGEN
 
 inherit
+
 	ATOM
 
 create
@@ -40,20 +41,20 @@ feature
 
 feature {NONE}
 
-	increment_atom(my_barrier: separate BARRIER)
+	increment_atom (my_barrier: separate BARRIER)
 			-- Separate call to increment the nuber of hydrogen atoms in the barrier
 		do
 			my_barrier.increment_hydrogen
 		end
 
-	try_bond(my_barrier: separate BARRIER)
+	try_bond (my_barrier: separate BARRIER)
 			-- try to bond the hydrogen atom in the barrier
 		require
 			my_barrier.has_space_for_hydrogen
 		do
 			io.put_string ("Hydrogen-" + id.out + " bonded %N")
-			increment_atom(my_barrier)
-			my_barrier.try_bond
+			increment_atom (my_barrier)
+			my_barrier.bond
 		end
 
 feature {NONE}
@@ -63,9 +64,7 @@ feature {NONE}
 	id: INTEGER -- id of this atom
 
 invariant
-
 	barrier /= void
-
 	id >= 0
 
 end

@@ -21,14 +21,13 @@ feature
 
 feature {HYDROGEN, OXYGEN}
 
-
-	has_space_for_oxygen:BOOLEAN
+	has_space_for_oxygen: BOOLEAN
 			-- Checks if there is space for oxygen in the barrier
 		do
 			Result := oxygens < 1
 		end
 
-	has_space_for_hydrogen:BOOLEAN
+	has_space_for_hydrogen: BOOLEAN
 			-- Checks if there is space for hydrogen in the barrier
 		do
 			Result := hydrogens < 2
@@ -50,7 +49,7 @@ feature {HYDROGEN, OXYGEN}
 			hydrogens = old hydrogens + 1
 		end
 
-	try_bond
+	bond
 			-- Checks if a molecule is ready before reseting it
 		do
 			if oxygens = 1 and hydrogens = 2 then
@@ -73,7 +72,6 @@ feature {NONE}
 		ensure
 			oxygens = 0 and hydrogens = 0
 		end
-
 
 feature {NONE} -- class variables
 
